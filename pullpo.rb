@@ -5,27 +5,25 @@
 class Pullpo < Formula
   desc "Control Pullpo, GitHub and GitLab from the terminal."
   homepage "https://pullpo.io/"
-  version "0.5"
+  version "0.6"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.5/pullpo_0.5_macOS_amd64.zip"
-      sha256 "df6571785c93f2af7166bb48f53ec57df0959fc3f229597e43bea443f36e08c3"
+    if Hardware::CPU.arm?
+      url "https://github.com/pullpo-io/cli/releases/download/v0.6/pullpo_0.6_macOS_arm64.zip"
+      sha256 "87e39323e0f824f6bd6f08c12c290881d58cff3e556ae49f6ae982dd00bf602a"
 
       def install
         bin.install "bin/pullpo"
-        bash_completion.install "./share/bash-completion/completions/pullpo" => "pullpo"
         man1.install "./share/man/man1/pullpo*.1"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.5/pullpo_0.5_macOS_arm64.zip"
-      sha256 "955ab1cb262d543cd2932c5dae3e7094a95cbce4b4ebaeefa51320ea0eb61a91"
+    if Hardware::CPU.intel?
+      url "https://github.com/pullpo-io/cli/releases/download/v0.6/pullpo_0.6_macOS_amd64.zip"
+      sha256 "0eb19882d39be619f41f7c35f37be99fcf9d9853aa2be9fe9e0ebbb065359dbd"
 
       def install
         bin.install "bin/pullpo"
-        bash_completion.install "./share/bash-completion/completions/pullpo" => "pullpo"
         man1.install "./share/man/man1/pullpo*.1"
       end
     end
@@ -33,32 +31,29 @@ class Pullpo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.5/pullpo_0.5_linux_armv6.tar.gz"
-      sha256 "c623847a950fbb3224bc5443157903fc7269c1d82e8d1c33b55cccec011290be"
+      url "https://github.com/pullpo-io/cli/releases/download/v0.6/pullpo_0.6_linux_armv6.tar.gz"
+      sha256 "fd56e9407dd7f02e3cbae143d34f851f13acd976405eac4317eca04793ffd3cd"
 
       def install
         bin.install "bin/pullpo"
-        bash_completion.install "./share/bash-completion/completions/pullpo" => "pullpo"
-        man1.install "./share/man/man1/pullpo*.1"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.5/pullpo_0.5_linux_arm64.tar.gz"
-      sha256 "6537c74ac6dbb5f31539d651f3da81c35f1e05d0239724db2fbce9c8f759f7b9"
-
-      def install
-        bin.install "bin/pullpo"
-        bash_completion.install "./share/bash-completion/completions/pullpo" => "pullpo"
         man1.install "./share/man/man1/pullpo*.1"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.5/pullpo_0.5_linux_amd64.tar.gz"
-      sha256 "0143960ed7fe8167c903e2f520f1cba182dbd24d1d1e6e583109e8f97b4a9736"
+      url "https://github.com/pullpo-io/cli/releases/download/v0.6/pullpo_0.6_linux_amd64.tar.gz"
+      sha256 "5835bf63ada3e8d2669fc68f92bd481e9f3e6774456a1b5813792befb3059467"
 
       def install
         bin.install "bin/pullpo"
-        bash_completion.install "./share/bash-completion/completions/pullpo" => "pullpo"
+        man1.install "./share/man/man1/pullpo*.1"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pullpo-io/cli/releases/download/v0.6/pullpo_0.6_linux_arm64.tar.gz"
+      sha256 "789500b06296179d6a0bac1b5cc055407d926815a38752ae57fd930b5e5ef61b"
+
+      def install
+        bin.install "bin/pullpo"
         man1.install "./share/man/man1/pullpo*.1"
       end
     end
