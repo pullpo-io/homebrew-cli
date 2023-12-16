@@ -5,966 +5,966 @@
 class Pullpo < Formula
   desc "Control Pullpo, GitHub and GitLab from the terminal."
   homepage "https://pullpo.io/"
-  version "0.7"
+  version "0.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.7/pullpo_0.7_macOS_arm64.zip"
-      sha256 "4ba5ecfa980112d924d087923a3de7d4a6f48b4ef1f65d3c0d0baa3d9227b61b"
+      url "https://github.com/pullpo-io/cli/releases/download/v0.8/pullpo_0.8_macOS_arm64.zip"
+      sha256 "727355fd37d0306ce22f005a60c5a76c07affc0e45cc2bdd5c905f5b355af495"
 
       def install
         bin.install "bin/pullpo"
-        man1.install "./share/man/man1/pullpo-alias-delete.1"
-        man1.install "./share/man/man1/pullpo-alias-import.1"
-        man1.install "./share/man/man1/pullpo-alias-list.1"
-        man1.install "./share/man/man1/pullpo-alias-set.1"
-        man1.install "./share/man/man1/pullpo-alias.1"
-        man1.install "./share/man/man1/pullpo-api.1"
-        man1.install "./share/man/man1/pullpo-auth-login.1"
-        man1.install "./share/man/man1/pullpo-auth-logout.1"
-        man1.install "./share/man/man1/pullpo-auth-refresh.1"
-        man1.install "./share/man/man1/pullpo-auth-setup-git.1"
-        man1.install "./share/man/man1/pullpo-auth-status.1"
-        man1.install "./share/man/man1/pullpo-auth-token.1"
-        man1.install "./share/man/man1/pullpo-auth.1"
-        man1.install "./share/man/man1/pullpo-browse.1"
-        man1.install "./share/man/man1/pullpo-cache-delete.1"
-        man1.install "./share/man/man1/pullpo-cache-list.1"
-        man1.install "./share/man/man1/pullpo-cache.1"
-        man1.install "./share/man/man1/pullpo-codespace-code.1"
-        man1.install "./share/man/man1/pullpo-codespace-cp.1"
-        man1.install "./share/man/man1/pullpo-codespace-create.1"
-        man1.install "./share/man/man1/pullpo-codespace-delete.1"
-        man1.install "./share/man/man1/pullpo-codespace-edit.1"
-        man1.install "./share/man/man1/pullpo-codespace-jupyter.1"
-        man1.install "./share/man/man1/pullpo-codespace-list.1"
-        man1.install "./share/man/man1/pullpo-codespace-logs.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-forward.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-visibility.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports.1"
-        man1.install "./share/man/man1/pullpo-codespace-rebuild.1"
-        man1.install "./share/man/man1/pullpo-codespace-ssh.1"
-        man1.install "./share/man/man1/pullpo-codespace-stop.1"
-        man1.install "./share/man/man1/pullpo-codespace-view.1"
-        man1.install "./share/man/man1/pullpo-codespace.1"
-        man1.install "./share/man/man1/pullpo-completion.1"
-        man1.install "./share/man/man1/pullpo-config-clear-cache.1"
-        man1.install "./share/man/man1/pullpo-config-get.1"
-        man1.install "./share/man/man1/pullpo-config-list.1"
-        man1.install "./share/man/man1/pullpo-config-set.1"
-        man1.install "./share/man/man1/pullpo-config.1"
-        man1.install "./share/man/man1/pullpo-extension-browse.1"
-        man1.install "./share/man/man1/pullpo-extension-create.1"
-        man1.install "./share/man/man1/pullpo-extension-exec.1"
-        man1.install "./share/man/man1/pullpo-extension-install.1"
-        man1.install "./share/man/man1/pullpo-extension-list.1"
-        man1.install "./share/man/man1/pullpo-extension-remove.1"
-        man1.install "./share/man/man1/pullpo-extension-search.1"
-        man1.install "./share/man/man1/pullpo-extension-upgrade.1"
-        man1.install "./share/man/man1/pullpo-extension.1"
-        man1.install "./share/man/man1/pullpo-gist-clone.1"
-        man1.install "./share/man/man1/pullpo-gist-create.1"
-        man1.install "./share/man/man1/pullpo-gist-delete.1"
-        man1.install "./share/man/man1/pullpo-gist-edit.1"
-        man1.install "./share/man/man1/pullpo-gist-list.1"
-        man1.install "./share/man/man1/pullpo-gist-rename.1"
-        man1.install "./share/man/man1/pullpo-gist-view.1"
-        man1.install "./share/man/man1/pullpo-gist.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-add.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-delete.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-list.1"
-        man1.install "./share/man/man1/pullpo-gpg-key.1"
-        man1.install "./share/man/man1/pullpo-issue-close.1"
-        man1.install "./share/man/man1/pullpo-issue-comment.1"
-        man1.install "./share/man/man1/pullpo-issue-create.1"
-        man1.install "./share/man/man1/pullpo-issue-delete.1"
-        man1.install "./share/man/man1/pullpo-issue-develop.1"
-        man1.install "./share/man/man1/pullpo-issue-edit.1"
-        man1.install "./share/man/man1/pullpo-issue-list.1"
-        man1.install "./share/man/man1/pullpo-issue-lock.1"
-        man1.install "./share/man/man1/pullpo-issue-pin.1"
-        man1.install "./share/man/man1/pullpo-issue-reopen.1"
-        man1.install "./share/man/man1/pullpo-issue-status.1"
-        man1.install "./share/man/man1/pullpo-issue-transfer.1"
-        man1.install "./share/man/man1/pullpo-issue-unlock.1"
-        man1.install "./share/man/man1/pullpo-issue-unpin.1"
-        man1.install "./share/man/man1/pullpo-issue-view.1"
-        man1.install "./share/man/man1/pullpo-issue.1"
-        man1.install "./share/man/man1/pullpo-label-clone.1"
-        man1.install "./share/man/man1/pullpo-label-create.1"
-        man1.install "./share/man/man1/pullpo-label-delete.1"
-        man1.install "./share/man/man1/pullpo-label-edit.1"
-        man1.install "./share/man/man1/pullpo-label-list.1"
-        man1.install "./share/man/man1/pullpo-label.1"
-        man1.install "./share/man/man1/pullpo-org-list.1"
-        man1.install "./share/man/man1/pullpo-org.1"
-        man1.install "./share/man/man1/pullpo-pr-checkout.1"
-        man1.install "./share/man/man1/pullpo-pr-checks.1"
-        man1.install "./share/man/man1/pullpo-pr-close.1"
-        man1.install "./share/man/man1/pullpo-pr-comment.1"
-        man1.install "./share/man/man1/pullpo-pr-create.1"
-        man1.install "./share/man/man1/pullpo-pr-diff.1"
-        man1.install "./share/man/man1/pullpo-pr-edit.1"
-        man1.install "./share/man/man1/pullpo-pr-list.1"
-        man1.install "./share/man/man1/pullpo-pr-lock.1"
-        man1.install "./share/man/man1/pullpo-pr-merge.1"
-        man1.install "./share/man/man1/pullpo-pr-ready.1"
-        man1.install "./share/man/man1/pullpo-pr-reopen.1"
-        man1.install "./share/man/man1/pullpo-pr-review.1"
-        man1.install "./share/man/man1/pullpo-pr-status.1"
-        man1.install "./share/man/man1/pullpo-pr-unlock.1"
-        man1.install "./share/man/man1/pullpo-pr-view.1"
-        man1.install "./share/man/man1/pullpo-pr.1"
-        man1.install "./share/man/man1/pullpo-project-close.1"
-        man1.install "./share/man/man1/pullpo-project-copy.1"
-        man1.install "./share/man/man1/pullpo-project-create.1"
-        man1.install "./share/man/man1/pullpo-project-delete.1"
-        man1.install "./share/man/man1/pullpo-project-edit.1"
-        man1.install "./share/man/man1/pullpo-project-field-create.1"
-        man1.install "./share/man/man1/pullpo-project-field-delete.1"
-        man1.install "./share/man/man1/pullpo-project-field-list.1"
-        man1.install "./share/man/man1/pullpo-project-item-add.1"
-        man1.install "./share/man/man1/pullpo-project-item-archive.1"
-        man1.install "./share/man/man1/pullpo-project-item-create.1"
-        man1.install "./share/man/man1/pullpo-project-item-delete.1"
-        man1.install "./share/man/man1/pullpo-project-item-edit.1"
-        man1.install "./share/man/man1/pullpo-project-item-list.1"
-        man1.install "./share/man/man1/pullpo-project-list.1"
-        man1.install "./share/man/man1/pullpo-project-mark-template.1"
-        man1.install "./share/man/man1/pullpo-project-view.1"
-        man1.install "./share/man/man1/pullpo-project.1"
-        man1.install "./share/man/man1/pullpo-release-create.1"
-        man1.install "./share/man/man1/pullpo-release-delete-asset.1"
-        man1.install "./share/man/man1/pullpo-release-delete.1"
-        man1.install "./share/man/man1/pullpo-release-download.1"
-        man1.install "./share/man/man1/pullpo-release-edit.1"
-        man1.install "./share/man/man1/pullpo-release-list.1"
-        man1.install "./share/man/man1/pullpo-release-upload.1"
-        man1.install "./share/man/man1/pullpo-release-view.1"
-        man1.install "./share/man/man1/pullpo-release.1"
-        man1.install "./share/man/man1/pullpo-repo-archive.1"
-        man1.install "./share/man/man1/pullpo-repo-clone.1"
-        man1.install "./share/man/man1/pullpo-repo-create.1"
-        man1.install "./share/man/man1/pullpo-repo-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-add.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-list.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key.1"
-        man1.install "./share/man/man1/pullpo-repo-edit.1"
-        man1.install "./share/man/man1/pullpo-repo-fork.1"
-        man1.install "./share/man/man1/pullpo-repo-list.1"
-        man1.install "./share/man/man1/pullpo-repo-rename.1"
-        man1.install "./share/man/man1/pullpo-repo-set-default.1"
-        man1.install "./share/man/man1/pullpo-repo-sync.1"
-        man1.install "./share/man/man1/pullpo-repo-unarchive.1"
-        man1.install "./share/man/man1/pullpo-repo-view.1"
-        man1.install "./share/man/man1/pullpo-repo.1"
-        man1.install "./share/man/man1/pullpo-ruleset-check.1"
-        man1.install "./share/man/man1/pullpo-ruleset-list.1"
-        man1.install "./share/man/man1/pullpo-ruleset-view.1"
-        man1.install "./share/man/man1/pullpo-ruleset.1"
-        man1.install "./share/man/man1/pullpo-run-cancel.1"
-        man1.install "./share/man/man1/pullpo-run-delete.1"
-        man1.install "./share/man/man1/pullpo-run-download.1"
-        man1.install "./share/man/man1/pullpo-run-list.1"
-        man1.install "./share/man/man1/pullpo-run-rerun.1"
-        man1.install "./share/man/man1/pullpo-run-view.1"
-        man1.install "./share/man/man1/pullpo-run-watch.1"
-        man1.install "./share/man/man1/pullpo-run.1"
-        man1.install "./share/man/man1/pullpo-search-code.1"
-        man1.install "./share/man/man1/pullpo-search-commits.1"
-        man1.install "./share/man/man1/pullpo-search-issues.1"
-        man1.install "./share/man/man1/pullpo-search-prs.1"
-        man1.install "./share/man/man1/pullpo-search-repos.1"
-        man1.install "./share/man/man1/pullpo-search.1"
-        man1.install "./share/man/man1/pullpo-secret-delete.1"
-        man1.install "./share/man/man1/pullpo-secret-list.1"
-        man1.install "./share/man/man1/pullpo-secret-set.1"
-        man1.install "./share/man/man1/pullpo-secret.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-add.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-delete.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-list.1"
-        man1.install "./share/man/man1/pullpo-ssh-key.1"
-        man1.install "./share/man/man1/pullpo-status.1"
-        man1.install "./share/man/man1/pullpo-variable-delete.1"
-        man1.install "./share/man/man1/pullpo-variable-list.1"
-        man1.install "./share/man/man1/pullpo-variable-set.1"
-        man1.install "./share/man/man1/pullpo-variable.1"
-        man1.install "./share/man/man1/pullpo-workflow-disable.1"
-        man1.install "./share/man/man1/pullpo-workflow-enable.1"
-        man1.install "./share/man/man1/pullpo-workflow-list.1"
-        man1.install "./share/man/man1/pullpo-workflow-run.1"
-        man1.install "./share/man/man1/pullpo-workflow-view.1"
-        man1.install "./share/man/man1/pullpo-workflow.1"
-        man1.install "./share/man/man1/pullpo.1
+        man1.install("./share/man/man1/pullpo-alias-delete.1")
+        man1.install("./share/man/man1/pullpo-alias-import.1")
+        man1.install("./share/man/man1/pullpo-alias-list.1")
+        man1.install("./share/man/man1/pullpo-alias-set.1")
+        man1.install("./share/man/man1/pullpo-alias.1")
+        man1.install("./share/man/man1/pullpo-api.1")
+        man1.install("./share/man/man1/pullpo-auth-login.1")
+        man1.install("./share/man/man1/pullpo-auth-logout.1")
+        man1.install("./share/man/man1/pullpo-auth-refresh.1")
+        man1.install("./share/man/man1/pullpo-auth-setup-git.1")
+        man1.install("./share/man/man1/pullpo-auth-status.1")
+        man1.install("./share/man/man1/pullpo-auth-token.1")
+        man1.install("./share/man/man1/pullpo-auth.1")
+        man1.install("./share/man/man1/pullpo-browse.1")
+        man1.install("./share/man/man1/pullpo-cache-delete.1")
+        man1.install("./share/man/man1/pullpo-cache-list.1")
+        man1.install("./share/man/man1/pullpo-cache.1")
+        man1.install("./share/man/man1/pullpo-codespace-code.1")
+        man1.install("./share/man/man1/pullpo-codespace-cp.1")
+        man1.install("./share/man/man1/pullpo-codespace-create.1")
+        man1.install("./share/man/man1/pullpo-codespace-delete.1")
+        man1.install("./share/man/man1/pullpo-codespace-edit.1")
+        man1.install("./share/man/man1/pullpo-codespace-jupyter.1")
+        man1.install("./share/man/man1/pullpo-codespace-list.1")
+        man1.install("./share/man/man1/pullpo-codespace-logs.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-forward.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-visibility.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports.1")
+        man1.install("./share/man/man1/pullpo-codespace-rebuild.1")
+        man1.install("./share/man/man1/pullpo-codespace-ssh.1")
+        man1.install("./share/man/man1/pullpo-codespace-stop.1")
+        man1.install("./share/man/man1/pullpo-codespace-view.1")
+        man1.install("./share/man/man1/pullpo-codespace.1")
+        man1.install("./share/man/man1/pullpo-completion.1")
+        man1.install("./share/man/man1/pullpo-config-clear-cache.1")
+        man1.install("./share/man/man1/pullpo-config-get.1")
+        man1.install("./share/man/man1/pullpo-config-list.1")
+        man1.install("./share/man/man1/pullpo-config-set.1")
+        man1.install("./share/man/man1/pullpo-config.1")
+        man1.install("./share/man/man1/pullpo-extension-browse.1")
+        man1.install("./share/man/man1/pullpo-extension-create.1")
+        man1.install("./share/man/man1/pullpo-extension-exec.1")
+        man1.install("./share/man/man1/pullpo-extension-install.1")
+        man1.install("./share/man/man1/pullpo-extension-list.1")
+        man1.install("./share/man/man1/pullpo-extension-remove.1")
+        man1.install("./share/man/man1/pullpo-extension-search.1")
+        man1.install("./share/man/man1/pullpo-extension-upgrade.1")
+        man1.install("./share/man/man1/pullpo-extension.1")
+        man1.install("./share/man/man1/pullpo-gist-clone.1")
+        man1.install("./share/man/man1/pullpo-gist-create.1")
+        man1.install("./share/man/man1/pullpo-gist-delete.1")
+        man1.install("./share/man/man1/pullpo-gist-edit.1")
+        man1.install("./share/man/man1/pullpo-gist-list.1")
+        man1.install("./share/man/man1/pullpo-gist-rename.1")
+        man1.install("./share/man/man1/pullpo-gist-view.1")
+        man1.install("./share/man/man1/pullpo-gist.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-add.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-delete.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-list.1")
+        man1.install("./share/man/man1/pullpo-gpg-key.1")
+        man1.install("./share/man/man1/pullpo-issue-close.1")
+        man1.install("./share/man/man1/pullpo-issue-comment.1")
+        man1.install("./share/man/man1/pullpo-issue-create.1")
+        man1.install("./share/man/man1/pullpo-issue-delete.1")
+        man1.install("./share/man/man1/pullpo-issue-develop.1")
+        man1.install("./share/man/man1/pullpo-issue-edit.1")
+        man1.install("./share/man/man1/pullpo-issue-list.1")
+        man1.install("./share/man/man1/pullpo-issue-lock.1")
+        man1.install("./share/man/man1/pullpo-issue-pin.1")
+        man1.install("./share/man/man1/pullpo-issue-reopen.1")
+        man1.install("./share/man/man1/pullpo-issue-status.1")
+        man1.install("./share/man/man1/pullpo-issue-transfer.1")
+        man1.install("./share/man/man1/pullpo-issue-unlock.1")
+        man1.install("./share/man/man1/pullpo-issue-unpin.1")
+        man1.install("./share/man/man1/pullpo-issue-view.1")
+        man1.install("./share/man/man1/pullpo-issue.1")
+        man1.install("./share/man/man1/pullpo-label-clone.1")
+        man1.install("./share/man/man1/pullpo-label-create.1")
+        man1.install("./share/man/man1/pullpo-label-delete.1")
+        man1.install("./share/man/man1/pullpo-label-edit.1")
+        man1.install("./share/man/man1/pullpo-label-list.1")
+        man1.install("./share/man/man1/pullpo-label.1")
+        man1.install("./share/man/man1/pullpo-org-list.1")
+        man1.install("./share/man/man1/pullpo-org.1")
+        man1.install("./share/man/man1/pullpo-pr-checkout.1")
+        man1.install("./share/man/man1/pullpo-pr-checks.1")
+        man1.install("./share/man/man1/pullpo-pr-close.1")
+        man1.install("./share/man/man1/pullpo-pr-comment.1")
+        man1.install("./share/man/man1/pullpo-pr-create.1")
+        man1.install("./share/man/man1/pullpo-pr-diff.1")
+        man1.install("./share/man/man1/pullpo-pr-edit.1")
+        man1.install("./share/man/man1/pullpo-pr-list.1")
+        man1.install("./share/man/man1/pullpo-pr-lock.1")
+        man1.install("./share/man/man1/pullpo-pr-merge.1")
+        man1.install("./share/man/man1/pullpo-pr-ready.1")
+        man1.install("./share/man/man1/pullpo-pr-reopen.1")
+        man1.install("./share/man/man1/pullpo-pr-review.1")
+        man1.install("./share/man/man1/pullpo-pr-status.1")
+        man1.install("./share/man/man1/pullpo-pr-unlock.1")
+        man1.install("./share/man/man1/pullpo-pr-view.1")
+        man1.install("./share/man/man1/pullpo-pr.1")
+        man1.install("./share/man/man1/pullpo-project-close.1")
+        man1.install("./share/man/man1/pullpo-project-copy.1")
+        man1.install("./share/man/man1/pullpo-project-create.1")
+        man1.install("./share/man/man1/pullpo-project-delete.1")
+        man1.install("./share/man/man1/pullpo-project-edit.1")
+        man1.install("./share/man/man1/pullpo-project-field-create.1")
+        man1.install("./share/man/man1/pullpo-project-field-delete.1")
+        man1.install("./share/man/man1/pullpo-project-field-list.1")
+        man1.install("./share/man/man1/pullpo-project-item-add.1")
+        man1.install("./share/man/man1/pullpo-project-item-archive.1")
+        man1.install("./share/man/man1/pullpo-project-item-create.1")
+        man1.install("./share/man/man1/pullpo-project-item-delete.1")
+        man1.install("./share/man/man1/pullpo-project-item-edit.1")
+        man1.install("./share/man/man1/pullpo-project-item-list.1")
+        man1.install("./share/man/man1/pullpo-project-list.1")
+        man1.install("./share/man/man1/pullpo-project-mark-template.1")
+        man1.install("./share/man/man1/pullpo-project-view.1")
+        man1.install("./share/man/man1/pullpo-project.1")
+        man1.install("./share/man/man1/pullpo-release-create.1")
+        man1.install("./share/man/man1/pullpo-release-delete-asset.1")
+        man1.install("./share/man/man1/pullpo-release-delete.1")
+        man1.install("./share/man/man1/pullpo-release-download.1")
+        man1.install("./share/man/man1/pullpo-release-edit.1")
+        man1.install("./share/man/man1/pullpo-release-list.1")
+        man1.install("./share/man/man1/pullpo-release-upload.1")
+        man1.install("./share/man/man1/pullpo-release-view.1")
+        man1.install("./share/man/man1/pullpo-release.1")
+        man1.install("./share/man/man1/pullpo-repo-archive.1")
+        man1.install("./share/man/man1/pullpo-repo-clone.1")
+        man1.install("./share/man/man1/pullpo-repo-create.1")
+        man1.install("./share/man/man1/pullpo-repo-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-add.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-list.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key.1")
+        man1.install("./share/man/man1/pullpo-repo-edit.1")
+        man1.install("./share/man/man1/pullpo-repo-fork.1")
+        man1.install("./share/man/man1/pullpo-repo-list.1")
+        man1.install("./share/man/man1/pullpo-repo-rename.1")
+        man1.install("./share/man/man1/pullpo-repo-set-default.1")
+        man1.install("./share/man/man1/pullpo-repo-sync.1")
+        man1.install("./share/man/man1/pullpo-repo-unarchive.1")
+        man1.install("./share/man/man1/pullpo-repo-view.1")
+        man1.install("./share/man/man1/pullpo-repo.1")
+        man1.install("./share/man/man1/pullpo-ruleset-check.1")
+        man1.install("./share/man/man1/pullpo-ruleset-list.1")
+        man1.install("./share/man/man1/pullpo-ruleset-view.1")
+        man1.install("./share/man/man1/pullpo-ruleset.1")
+        man1.install("./share/man/man1/pullpo-run-cancel.1")
+        man1.install("./share/man/man1/pullpo-run-delete.1")
+        man1.install("./share/man/man1/pullpo-run-download.1")
+        man1.install("./share/man/man1/pullpo-run-list.1")
+        man1.install("./share/man/man1/pullpo-run-rerun.1")
+        man1.install("./share/man/man1/pullpo-run-view.1")
+        man1.install("./share/man/man1/pullpo-run-watch.1")
+        man1.install("./share/man/man1/pullpo-run.1")
+        man1.install("./share/man/man1/pullpo-search-code.1")
+        man1.install("./share/man/man1/pullpo-search-commits.1")
+        man1.install("./share/man/man1/pullpo-search-issues.1")
+        man1.install("./share/man/man1/pullpo-search-prs.1")
+        man1.install("./share/man/man1/pullpo-search-repos.1")
+        man1.install("./share/man/man1/pullpo-search.1")
+        man1.install("./share/man/man1/pullpo-secret-delete.1")
+        man1.install("./share/man/man1/pullpo-secret-list.1")
+        man1.install("./share/man/man1/pullpo-secret-set.1")
+        man1.install("./share/man/man1/pullpo-secret.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-add.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-delete.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-list.1")
+        man1.install("./share/man/man1/pullpo-ssh-key.1")
+        man1.install("./share/man/man1/pullpo-status.1")
+        man1.install("./share/man/man1/pullpo-variable-delete.1")
+        man1.install("./share/man/man1/pullpo-variable-list.1")
+        man1.install("./share/man/man1/pullpo-variable-set.1")
+        man1.install("./share/man/man1/pullpo-variable.1")
+        man1.install("./share/man/man1/pullpo-workflow-disable.1")
+        man1.install("./share/man/man1/pullpo-workflow-enable.1")
+        man1.install("./share/man/man1/pullpo-workflow-list.1")
+        man1.install("./share/man/man1/pullpo-workflow-run.1")
+        man1.install("./share/man/man1/pullpo-workflow-view.1")
+        man1.install("./share/man/man1/pullpo-workflow.1")
+        man1.install("./share/man/man1/pullpo.1)
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.7/pullpo_0.7_macOS_amd64.zip"
-      sha256 "270dc4d5eb40eab9177cab3dfda430ba104c5db3b05bf95298f8d6722789d23b"
+      url "https://github.com/pullpo-io/cli/releases/download/v0.8/pullpo_0.8_macOS_amd64.zip"
+      sha256 "89d9808f493bf0c855ae07eb5d5ade87fe992e4163341b32d346b048b9a54f2d"
 
       def install
         bin.install "bin/pullpo"
-        man1.install "./share/man/man1/pullpo-alias-delete.1"
-        man1.install "./share/man/man1/pullpo-alias-import.1"
-        man1.install "./share/man/man1/pullpo-alias-list.1"
-        man1.install "./share/man/man1/pullpo-alias-set.1"
-        man1.install "./share/man/man1/pullpo-alias.1"
-        man1.install "./share/man/man1/pullpo-api.1"
-        man1.install "./share/man/man1/pullpo-auth-login.1"
-        man1.install "./share/man/man1/pullpo-auth-logout.1"
-        man1.install "./share/man/man1/pullpo-auth-refresh.1"
-        man1.install "./share/man/man1/pullpo-auth-setup-git.1"
-        man1.install "./share/man/man1/pullpo-auth-status.1"
-        man1.install "./share/man/man1/pullpo-auth-token.1"
-        man1.install "./share/man/man1/pullpo-auth.1"
-        man1.install "./share/man/man1/pullpo-browse.1"
-        man1.install "./share/man/man1/pullpo-cache-delete.1"
-        man1.install "./share/man/man1/pullpo-cache-list.1"
-        man1.install "./share/man/man1/pullpo-cache.1"
-        man1.install "./share/man/man1/pullpo-codespace-code.1"
-        man1.install "./share/man/man1/pullpo-codespace-cp.1"
-        man1.install "./share/man/man1/pullpo-codespace-create.1"
-        man1.install "./share/man/man1/pullpo-codespace-delete.1"
-        man1.install "./share/man/man1/pullpo-codespace-edit.1"
-        man1.install "./share/man/man1/pullpo-codespace-jupyter.1"
-        man1.install "./share/man/man1/pullpo-codespace-list.1"
-        man1.install "./share/man/man1/pullpo-codespace-logs.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-forward.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-visibility.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports.1"
-        man1.install "./share/man/man1/pullpo-codespace-rebuild.1"
-        man1.install "./share/man/man1/pullpo-codespace-ssh.1"
-        man1.install "./share/man/man1/pullpo-codespace-stop.1"
-        man1.install "./share/man/man1/pullpo-codespace-view.1"
-        man1.install "./share/man/man1/pullpo-codespace.1"
-        man1.install "./share/man/man1/pullpo-completion.1"
-        man1.install "./share/man/man1/pullpo-config-clear-cache.1"
-        man1.install "./share/man/man1/pullpo-config-get.1"
-        man1.install "./share/man/man1/pullpo-config-list.1"
-        man1.install "./share/man/man1/pullpo-config-set.1"
-        man1.install "./share/man/man1/pullpo-config.1"
-        man1.install "./share/man/man1/pullpo-extension-browse.1"
-        man1.install "./share/man/man1/pullpo-extension-create.1"
-        man1.install "./share/man/man1/pullpo-extension-exec.1"
-        man1.install "./share/man/man1/pullpo-extension-install.1"
-        man1.install "./share/man/man1/pullpo-extension-list.1"
-        man1.install "./share/man/man1/pullpo-extension-remove.1"
-        man1.install "./share/man/man1/pullpo-extension-search.1"
-        man1.install "./share/man/man1/pullpo-extension-upgrade.1"
-        man1.install "./share/man/man1/pullpo-extension.1"
-        man1.install "./share/man/man1/pullpo-gist-clone.1"
-        man1.install "./share/man/man1/pullpo-gist-create.1"
-        man1.install "./share/man/man1/pullpo-gist-delete.1"
-        man1.install "./share/man/man1/pullpo-gist-edit.1"
-        man1.install "./share/man/man1/pullpo-gist-list.1"
-        man1.install "./share/man/man1/pullpo-gist-rename.1"
-        man1.install "./share/man/man1/pullpo-gist-view.1"
-        man1.install "./share/man/man1/pullpo-gist.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-add.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-delete.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-list.1"
-        man1.install "./share/man/man1/pullpo-gpg-key.1"
-        man1.install "./share/man/man1/pullpo-issue-close.1"
-        man1.install "./share/man/man1/pullpo-issue-comment.1"
-        man1.install "./share/man/man1/pullpo-issue-create.1"
-        man1.install "./share/man/man1/pullpo-issue-delete.1"
-        man1.install "./share/man/man1/pullpo-issue-develop.1"
-        man1.install "./share/man/man1/pullpo-issue-edit.1"
-        man1.install "./share/man/man1/pullpo-issue-list.1"
-        man1.install "./share/man/man1/pullpo-issue-lock.1"
-        man1.install "./share/man/man1/pullpo-issue-pin.1"
-        man1.install "./share/man/man1/pullpo-issue-reopen.1"
-        man1.install "./share/man/man1/pullpo-issue-status.1"
-        man1.install "./share/man/man1/pullpo-issue-transfer.1"
-        man1.install "./share/man/man1/pullpo-issue-unlock.1"
-        man1.install "./share/man/man1/pullpo-issue-unpin.1"
-        man1.install "./share/man/man1/pullpo-issue-view.1"
-        man1.install "./share/man/man1/pullpo-issue.1"
-        man1.install "./share/man/man1/pullpo-label-clone.1"
-        man1.install "./share/man/man1/pullpo-label-create.1"
-        man1.install "./share/man/man1/pullpo-label-delete.1"
-        man1.install "./share/man/man1/pullpo-label-edit.1"
-        man1.install "./share/man/man1/pullpo-label-list.1"
-        man1.install "./share/man/man1/pullpo-label.1"
-        man1.install "./share/man/man1/pullpo-org-list.1"
-        man1.install "./share/man/man1/pullpo-org.1"
-        man1.install "./share/man/man1/pullpo-pr-checkout.1"
-        man1.install "./share/man/man1/pullpo-pr-checks.1"
-        man1.install "./share/man/man1/pullpo-pr-close.1"
-        man1.install "./share/man/man1/pullpo-pr-comment.1"
-        man1.install "./share/man/man1/pullpo-pr-create.1"
-        man1.install "./share/man/man1/pullpo-pr-diff.1"
-        man1.install "./share/man/man1/pullpo-pr-edit.1"
-        man1.install "./share/man/man1/pullpo-pr-list.1"
-        man1.install "./share/man/man1/pullpo-pr-lock.1"
-        man1.install "./share/man/man1/pullpo-pr-merge.1"
-        man1.install "./share/man/man1/pullpo-pr-ready.1"
-        man1.install "./share/man/man1/pullpo-pr-reopen.1"
-        man1.install "./share/man/man1/pullpo-pr-review.1"
-        man1.install "./share/man/man1/pullpo-pr-status.1"
-        man1.install "./share/man/man1/pullpo-pr-unlock.1"
-        man1.install "./share/man/man1/pullpo-pr-view.1"
-        man1.install "./share/man/man1/pullpo-pr.1"
-        man1.install "./share/man/man1/pullpo-project-close.1"
-        man1.install "./share/man/man1/pullpo-project-copy.1"
-        man1.install "./share/man/man1/pullpo-project-create.1"
-        man1.install "./share/man/man1/pullpo-project-delete.1"
-        man1.install "./share/man/man1/pullpo-project-edit.1"
-        man1.install "./share/man/man1/pullpo-project-field-create.1"
-        man1.install "./share/man/man1/pullpo-project-field-delete.1"
-        man1.install "./share/man/man1/pullpo-project-field-list.1"
-        man1.install "./share/man/man1/pullpo-project-item-add.1"
-        man1.install "./share/man/man1/pullpo-project-item-archive.1"
-        man1.install "./share/man/man1/pullpo-project-item-create.1"
-        man1.install "./share/man/man1/pullpo-project-item-delete.1"
-        man1.install "./share/man/man1/pullpo-project-item-edit.1"
-        man1.install "./share/man/man1/pullpo-project-item-list.1"
-        man1.install "./share/man/man1/pullpo-project-list.1"
-        man1.install "./share/man/man1/pullpo-project-mark-template.1"
-        man1.install "./share/man/man1/pullpo-project-view.1"
-        man1.install "./share/man/man1/pullpo-project.1"
-        man1.install "./share/man/man1/pullpo-release-create.1"
-        man1.install "./share/man/man1/pullpo-release-delete-asset.1"
-        man1.install "./share/man/man1/pullpo-release-delete.1"
-        man1.install "./share/man/man1/pullpo-release-download.1"
-        man1.install "./share/man/man1/pullpo-release-edit.1"
-        man1.install "./share/man/man1/pullpo-release-list.1"
-        man1.install "./share/man/man1/pullpo-release-upload.1"
-        man1.install "./share/man/man1/pullpo-release-view.1"
-        man1.install "./share/man/man1/pullpo-release.1"
-        man1.install "./share/man/man1/pullpo-repo-archive.1"
-        man1.install "./share/man/man1/pullpo-repo-clone.1"
-        man1.install "./share/man/man1/pullpo-repo-create.1"
-        man1.install "./share/man/man1/pullpo-repo-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-add.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-list.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key.1"
-        man1.install "./share/man/man1/pullpo-repo-edit.1"
-        man1.install "./share/man/man1/pullpo-repo-fork.1"
-        man1.install "./share/man/man1/pullpo-repo-list.1"
-        man1.install "./share/man/man1/pullpo-repo-rename.1"
-        man1.install "./share/man/man1/pullpo-repo-set-default.1"
-        man1.install "./share/man/man1/pullpo-repo-sync.1"
-        man1.install "./share/man/man1/pullpo-repo-unarchive.1"
-        man1.install "./share/man/man1/pullpo-repo-view.1"
-        man1.install "./share/man/man1/pullpo-repo.1"
-        man1.install "./share/man/man1/pullpo-ruleset-check.1"
-        man1.install "./share/man/man1/pullpo-ruleset-list.1"
-        man1.install "./share/man/man1/pullpo-ruleset-view.1"
-        man1.install "./share/man/man1/pullpo-ruleset.1"
-        man1.install "./share/man/man1/pullpo-run-cancel.1"
-        man1.install "./share/man/man1/pullpo-run-delete.1"
-        man1.install "./share/man/man1/pullpo-run-download.1"
-        man1.install "./share/man/man1/pullpo-run-list.1"
-        man1.install "./share/man/man1/pullpo-run-rerun.1"
-        man1.install "./share/man/man1/pullpo-run-view.1"
-        man1.install "./share/man/man1/pullpo-run-watch.1"
-        man1.install "./share/man/man1/pullpo-run.1"
-        man1.install "./share/man/man1/pullpo-search-code.1"
-        man1.install "./share/man/man1/pullpo-search-commits.1"
-        man1.install "./share/man/man1/pullpo-search-issues.1"
-        man1.install "./share/man/man1/pullpo-search-prs.1"
-        man1.install "./share/man/man1/pullpo-search-repos.1"
-        man1.install "./share/man/man1/pullpo-search.1"
-        man1.install "./share/man/man1/pullpo-secret-delete.1"
-        man1.install "./share/man/man1/pullpo-secret-list.1"
-        man1.install "./share/man/man1/pullpo-secret-set.1"
-        man1.install "./share/man/man1/pullpo-secret.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-add.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-delete.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-list.1"
-        man1.install "./share/man/man1/pullpo-ssh-key.1"
-        man1.install "./share/man/man1/pullpo-status.1"
-        man1.install "./share/man/man1/pullpo-variable-delete.1"
-        man1.install "./share/man/man1/pullpo-variable-list.1"
-        man1.install "./share/man/man1/pullpo-variable-set.1"
-        man1.install "./share/man/man1/pullpo-variable.1"
-        man1.install "./share/man/man1/pullpo-workflow-disable.1"
-        man1.install "./share/man/man1/pullpo-workflow-enable.1"
-        man1.install "./share/man/man1/pullpo-workflow-list.1"
-        man1.install "./share/man/man1/pullpo-workflow-run.1"
-        man1.install "./share/man/man1/pullpo-workflow-view.1"
-        man1.install "./share/man/man1/pullpo-workflow.1"
-        man1.install "./share/man/man1/pullpo.1
+        man1.install("./share/man/man1/pullpo-alias-delete.1")
+        man1.install("./share/man/man1/pullpo-alias-import.1")
+        man1.install("./share/man/man1/pullpo-alias-list.1")
+        man1.install("./share/man/man1/pullpo-alias-set.1")
+        man1.install("./share/man/man1/pullpo-alias.1")
+        man1.install("./share/man/man1/pullpo-api.1")
+        man1.install("./share/man/man1/pullpo-auth-login.1")
+        man1.install("./share/man/man1/pullpo-auth-logout.1")
+        man1.install("./share/man/man1/pullpo-auth-refresh.1")
+        man1.install("./share/man/man1/pullpo-auth-setup-git.1")
+        man1.install("./share/man/man1/pullpo-auth-status.1")
+        man1.install("./share/man/man1/pullpo-auth-token.1")
+        man1.install("./share/man/man1/pullpo-auth.1")
+        man1.install("./share/man/man1/pullpo-browse.1")
+        man1.install("./share/man/man1/pullpo-cache-delete.1")
+        man1.install("./share/man/man1/pullpo-cache-list.1")
+        man1.install("./share/man/man1/pullpo-cache.1")
+        man1.install("./share/man/man1/pullpo-codespace-code.1")
+        man1.install("./share/man/man1/pullpo-codespace-cp.1")
+        man1.install("./share/man/man1/pullpo-codespace-create.1")
+        man1.install("./share/man/man1/pullpo-codespace-delete.1")
+        man1.install("./share/man/man1/pullpo-codespace-edit.1")
+        man1.install("./share/man/man1/pullpo-codespace-jupyter.1")
+        man1.install("./share/man/man1/pullpo-codespace-list.1")
+        man1.install("./share/man/man1/pullpo-codespace-logs.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-forward.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-visibility.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports.1")
+        man1.install("./share/man/man1/pullpo-codespace-rebuild.1")
+        man1.install("./share/man/man1/pullpo-codespace-ssh.1")
+        man1.install("./share/man/man1/pullpo-codespace-stop.1")
+        man1.install("./share/man/man1/pullpo-codespace-view.1")
+        man1.install("./share/man/man1/pullpo-codespace.1")
+        man1.install("./share/man/man1/pullpo-completion.1")
+        man1.install("./share/man/man1/pullpo-config-clear-cache.1")
+        man1.install("./share/man/man1/pullpo-config-get.1")
+        man1.install("./share/man/man1/pullpo-config-list.1")
+        man1.install("./share/man/man1/pullpo-config-set.1")
+        man1.install("./share/man/man1/pullpo-config.1")
+        man1.install("./share/man/man1/pullpo-extension-browse.1")
+        man1.install("./share/man/man1/pullpo-extension-create.1")
+        man1.install("./share/man/man1/pullpo-extension-exec.1")
+        man1.install("./share/man/man1/pullpo-extension-install.1")
+        man1.install("./share/man/man1/pullpo-extension-list.1")
+        man1.install("./share/man/man1/pullpo-extension-remove.1")
+        man1.install("./share/man/man1/pullpo-extension-search.1")
+        man1.install("./share/man/man1/pullpo-extension-upgrade.1")
+        man1.install("./share/man/man1/pullpo-extension.1")
+        man1.install("./share/man/man1/pullpo-gist-clone.1")
+        man1.install("./share/man/man1/pullpo-gist-create.1")
+        man1.install("./share/man/man1/pullpo-gist-delete.1")
+        man1.install("./share/man/man1/pullpo-gist-edit.1")
+        man1.install("./share/man/man1/pullpo-gist-list.1")
+        man1.install("./share/man/man1/pullpo-gist-rename.1")
+        man1.install("./share/man/man1/pullpo-gist-view.1")
+        man1.install("./share/man/man1/pullpo-gist.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-add.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-delete.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-list.1")
+        man1.install("./share/man/man1/pullpo-gpg-key.1")
+        man1.install("./share/man/man1/pullpo-issue-close.1")
+        man1.install("./share/man/man1/pullpo-issue-comment.1")
+        man1.install("./share/man/man1/pullpo-issue-create.1")
+        man1.install("./share/man/man1/pullpo-issue-delete.1")
+        man1.install("./share/man/man1/pullpo-issue-develop.1")
+        man1.install("./share/man/man1/pullpo-issue-edit.1")
+        man1.install("./share/man/man1/pullpo-issue-list.1")
+        man1.install("./share/man/man1/pullpo-issue-lock.1")
+        man1.install("./share/man/man1/pullpo-issue-pin.1")
+        man1.install("./share/man/man1/pullpo-issue-reopen.1")
+        man1.install("./share/man/man1/pullpo-issue-status.1")
+        man1.install("./share/man/man1/pullpo-issue-transfer.1")
+        man1.install("./share/man/man1/pullpo-issue-unlock.1")
+        man1.install("./share/man/man1/pullpo-issue-unpin.1")
+        man1.install("./share/man/man1/pullpo-issue-view.1")
+        man1.install("./share/man/man1/pullpo-issue.1")
+        man1.install("./share/man/man1/pullpo-label-clone.1")
+        man1.install("./share/man/man1/pullpo-label-create.1")
+        man1.install("./share/man/man1/pullpo-label-delete.1")
+        man1.install("./share/man/man1/pullpo-label-edit.1")
+        man1.install("./share/man/man1/pullpo-label-list.1")
+        man1.install("./share/man/man1/pullpo-label.1")
+        man1.install("./share/man/man1/pullpo-org-list.1")
+        man1.install("./share/man/man1/pullpo-org.1")
+        man1.install("./share/man/man1/pullpo-pr-checkout.1")
+        man1.install("./share/man/man1/pullpo-pr-checks.1")
+        man1.install("./share/man/man1/pullpo-pr-close.1")
+        man1.install("./share/man/man1/pullpo-pr-comment.1")
+        man1.install("./share/man/man1/pullpo-pr-create.1")
+        man1.install("./share/man/man1/pullpo-pr-diff.1")
+        man1.install("./share/man/man1/pullpo-pr-edit.1")
+        man1.install("./share/man/man1/pullpo-pr-list.1")
+        man1.install("./share/man/man1/pullpo-pr-lock.1")
+        man1.install("./share/man/man1/pullpo-pr-merge.1")
+        man1.install("./share/man/man1/pullpo-pr-ready.1")
+        man1.install("./share/man/man1/pullpo-pr-reopen.1")
+        man1.install("./share/man/man1/pullpo-pr-review.1")
+        man1.install("./share/man/man1/pullpo-pr-status.1")
+        man1.install("./share/man/man1/pullpo-pr-unlock.1")
+        man1.install("./share/man/man1/pullpo-pr-view.1")
+        man1.install("./share/man/man1/pullpo-pr.1")
+        man1.install("./share/man/man1/pullpo-project-close.1")
+        man1.install("./share/man/man1/pullpo-project-copy.1")
+        man1.install("./share/man/man1/pullpo-project-create.1")
+        man1.install("./share/man/man1/pullpo-project-delete.1")
+        man1.install("./share/man/man1/pullpo-project-edit.1")
+        man1.install("./share/man/man1/pullpo-project-field-create.1")
+        man1.install("./share/man/man1/pullpo-project-field-delete.1")
+        man1.install("./share/man/man1/pullpo-project-field-list.1")
+        man1.install("./share/man/man1/pullpo-project-item-add.1")
+        man1.install("./share/man/man1/pullpo-project-item-archive.1")
+        man1.install("./share/man/man1/pullpo-project-item-create.1")
+        man1.install("./share/man/man1/pullpo-project-item-delete.1")
+        man1.install("./share/man/man1/pullpo-project-item-edit.1")
+        man1.install("./share/man/man1/pullpo-project-item-list.1")
+        man1.install("./share/man/man1/pullpo-project-list.1")
+        man1.install("./share/man/man1/pullpo-project-mark-template.1")
+        man1.install("./share/man/man1/pullpo-project-view.1")
+        man1.install("./share/man/man1/pullpo-project.1")
+        man1.install("./share/man/man1/pullpo-release-create.1")
+        man1.install("./share/man/man1/pullpo-release-delete-asset.1")
+        man1.install("./share/man/man1/pullpo-release-delete.1")
+        man1.install("./share/man/man1/pullpo-release-download.1")
+        man1.install("./share/man/man1/pullpo-release-edit.1")
+        man1.install("./share/man/man1/pullpo-release-list.1")
+        man1.install("./share/man/man1/pullpo-release-upload.1")
+        man1.install("./share/man/man1/pullpo-release-view.1")
+        man1.install("./share/man/man1/pullpo-release.1")
+        man1.install("./share/man/man1/pullpo-repo-archive.1")
+        man1.install("./share/man/man1/pullpo-repo-clone.1")
+        man1.install("./share/man/man1/pullpo-repo-create.1")
+        man1.install("./share/man/man1/pullpo-repo-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-add.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-list.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key.1")
+        man1.install("./share/man/man1/pullpo-repo-edit.1")
+        man1.install("./share/man/man1/pullpo-repo-fork.1")
+        man1.install("./share/man/man1/pullpo-repo-list.1")
+        man1.install("./share/man/man1/pullpo-repo-rename.1")
+        man1.install("./share/man/man1/pullpo-repo-set-default.1")
+        man1.install("./share/man/man1/pullpo-repo-sync.1")
+        man1.install("./share/man/man1/pullpo-repo-unarchive.1")
+        man1.install("./share/man/man1/pullpo-repo-view.1")
+        man1.install("./share/man/man1/pullpo-repo.1")
+        man1.install("./share/man/man1/pullpo-ruleset-check.1")
+        man1.install("./share/man/man1/pullpo-ruleset-list.1")
+        man1.install("./share/man/man1/pullpo-ruleset-view.1")
+        man1.install("./share/man/man1/pullpo-ruleset.1")
+        man1.install("./share/man/man1/pullpo-run-cancel.1")
+        man1.install("./share/man/man1/pullpo-run-delete.1")
+        man1.install("./share/man/man1/pullpo-run-download.1")
+        man1.install("./share/man/man1/pullpo-run-list.1")
+        man1.install("./share/man/man1/pullpo-run-rerun.1")
+        man1.install("./share/man/man1/pullpo-run-view.1")
+        man1.install("./share/man/man1/pullpo-run-watch.1")
+        man1.install("./share/man/man1/pullpo-run.1")
+        man1.install("./share/man/man1/pullpo-search-code.1")
+        man1.install("./share/man/man1/pullpo-search-commits.1")
+        man1.install("./share/man/man1/pullpo-search-issues.1")
+        man1.install("./share/man/man1/pullpo-search-prs.1")
+        man1.install("./share/man/man1/pullpo-search-repos.1")
+        man1.install("./share/man/man1/pullpo-search.1")
+        man1.install("./share/man/man1/pullpo-secret-delete.1")
+        man1.install("./share/man/man1/pullpo-secret-list.1")
+        man1.install("./share/man/man1/pullpo-secret-set.1")
+        man1.install("./share/man/man1/pullpo-secret.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-add.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-delete.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-list.1")
+        man1.install("./share/man/man1/pullpo-ssh-key.1")
+        man1.install("./share/man/man1/pullpo-status.1")
+        man1.install("./share/man/man1/pullpo-variable-delete.1")
+        man1.install("./share/man/man1/pullpo-variable-list.1")
+        man1.install("./share/man/man1/pullpo-variable-set.1")
+        man1.install("./share/man/man1/pullpo-variable.1")
+        man1.install("./share/man/man1/pullpo-workflow-disable.1")
+        man1.install("./share/man/man1/pullpo-workflow-enable.1")
+        man1.install("./share/man/man1/pullpo-workflow-list.1")
+        man1.install("./share/man/man1/pullpo-workflow-run.1")
+        man1.install("./share/man/man1/pullpo-workflow-view.1")
+        man1.install("./share/man/man1/pullpo-workflow.1")
+        man1.install("./share/man/man1/pullpo.1)
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.7/pullpo_0.7_linux_armv6.tar.gz"
-      sha256 "dcb793b51439d91b5e24432198c0be15e58bcbeae64868c02a8f979df2b84c65"
+      url "https://github.com/pullpo-io/cli/releases/download/v0.8/pullpo_0.8_linux_armv6.tar.gz"
+      sha256 "2bbbe588abc1662b2fa4adb7d3de76414ff9ea2f59f738b872658c2b4fd1136a"
 
       def install
         bin.install "bin/pullpo"
-        man1.install "./share/man/man1/pullpo-alias-delete.1"
-        man1.install "./share/man/man1/pullpo-alias-import.1"
-        man1.install "./share/man/man1/pullpo-alias-list.1"
-        man1.install "./share/man/man1/pullpo-alias-set.1"
-        man1.install "./share/man/man1/pullpo-alias.1"
-        man1.install "./share/man/man1/pullpo-api.1"
-        man1.install "./share/man/man1/pullpo-auth-login.1"
-        man1.install "./share/man/man1/pullpo-auth-logout.1"
-        man1.install "./share/man/man1/pullpo-auth-refresh.1"
-        man1.install "./share/man/man1/pullpo-auth-setup-git.1"
-        man1.install "./share/man/man1/pullpo-auth-status.1"
-        man1.install "./share/man/man1/pullpo-auth-token.1"
-        man1.install "./share/man/man1/pullpo-auth.1"
-        man1.install "./share/man/man1/pullpo-browse.1"
-        man1.install "./share/man/man1/pullpo-cache-delete.1"
-        man1.install "./share/man/man1/pullpo-cache-list.1"
-        man1.install "./share/man/man1/pullpo-cache.1"
-        man1.install "./share/man/man1/pullpo-codespace-code.1"
-        man1.install "./share/man/man1/pullpo-codespace-cp.1"
-        man1.install "./share/man/man1/pullpo-codespace-create.1"
-        man1.install "./share/man/man1/pullpo-codespace-delete.1"
-        man1.install "./share/man/man1/pullpo-codespace-edit.1"
-        man1.install "./share/man/man1/pullpo-codespace-jupyter.1"
-        man1.install "./share/man/man1/pullpo-codespace-list.1"
-        man1.install "./share/man/man1/pullpo-codespace-logs.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-forward.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-visibility.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports.1"
-        man1.install "./share/man/man1/pullpo-codespace-rebuild.1"
-        man1.install "./share/man/man1/pullpo-codespace-ssh.1"
-        man1.install "./share/man/man1/pullpo-codespace-stop.1"
-        man1.install "./share/man/man1/pullpo-codespace-view.1"
-        man1.install "./share/man/man1/pullpo-codespace.1"
-        man1.install "./share/man/man1/pullpo-completion.1"
-        man1.install "./share/man/man1/pullpo-config-clear-cache.1"
-        man1.install "./share/man/man1/pullpo-config-get.1"
-        man1.install "./share/man/man1/pullpo-config-list.1"
-        man1.install "./share/man/man1/pullpo-config-set.1"
-        man1.install "./share/man/man1/pullpo-config.1"
-        man1.install "./share/man/man1/pullpo-extension-browse.1"
-        man1.install "./share/man/man1/pullpo-extension-create.1"
-        man1.install "./share/man/man1/pullpo-extension-exec.1"
-        man1.install "./share/man/man1/pullpo-extension-install.1"
-        man1.install "./share/man/man1/pullpo-extension-list.1"
-        man1.install "./share/man/man1/pullpo-extension-remove.1"
-        man1.install "./share/man/man1/pullpo-extension-search.1"
-        man1.install "./share/man/man1/pullpo-extension-upgrade.1"
-        man1.install "./share/man/man1/pullpo-extension.1"
-        man1.install "./share/man/man1/pullpo-gist-clone.1"
-        man1.install "./share/man/man1/pullpo-gist-create.1"
-        man1.install "./share/man/man1/pullpo-gist-delete.1"
-        man1.install "./share/man/man1/pullpo-gist-edit.1"
-        man1.install "./share/man/man1/pullpo-gist-list.1"
-        man1.install "./share/man/man1/pullpo-gist-rename.1"
-        man1.install "./share/man/man1/pullpo-gist-view.1"
-        man1.install "./share/man/man1/pullpo-gist.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-add.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-delete.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-list.1"
-        man1.install "./share/man/man1/pullpo-gpg-key.1"
-        man1.install "./share/man/man1/pullpo-issue-close.1"
-        man1.install "./share/man/man1/pullpo-issue-comment.1"
-        man1.install "./share/man/man1/pullpo-issue-create.1"
-        man1.install "./share/man/man1/pullpo-issue-delete.1"
-        man1.install "./share/man/man1/pullpo-issue-develop.1"
-        man1.install "./share/man/man1/pullpo-issue-edit.1"
-        man1.install "./share/man/man1/pullpo-issue-list.1"
-        man1.install "./share/man/man1/pullpo-issue-lock.1"
-        man1.install "./share/man/man1/pullpo-issue-pin.1"
-        man1.install "./share/man/man1/pullpo-issue-reopen.1"
-        man1.install "./share/man/man1/pullpo-issue-status.1"
-        man1.install "./share/man/man1/pullpo-issue-transfer.1"
-        man1.install "./share/man/man1/pullpo-issue-unlock.1"
-        man1.install "./share/man/man1/pullpo-issue-unpin.1"
-        man1.install "./share/man/man1/pullpo-issue-view.1"
-        man1.install "./share/man/man1/pullpo-issue.1"
-        man1.install "./share/man/man1/pullpo-label-clone.1"
-        man1.install "./share/man/man1/pullpo-label-create.1"
-        man1.install "./share/man/man1/pullpo-label-delete.1"
-        man1.install "./share/man/man1/pullpo-label-edit.1"
-        man1.install "./share/man/man1/pullpo-label-list.1"
-        man1.install "./share/man/man1/pullpo-label.1"
-        man1.install "./share/man/man1/pullpo-org-list.1"
-        man1.install "./share/man/man1/pullpo-org.1"
-        man1.install "./share/man/man1/pullpo-pr-checkout.1"
-        man1.install "./share/man/man1/pullpo-pr-checks.1"
-        man1.install "./share/man/man1/pullpo-pr-close.1"
-        man1.install "./share/man/man1/pullpo-pr-comment.1"
-        man1.install "./share/man/man1/pullpo-pr-create.1"
-        man1.install "./share/man/man1/pullpo-pr-diff.1"
-        man1.install "./share/man/man1/pullpo-pr-edit.1"
-        man1.install "./share/man/man1/pullpo-pr-list.1"
-        man1.install "./share/man/man1/pullpo-pr-lock.1"
-        man1.install "./share/man/man1/pullpo-pr-merge.1"
-        man1.install "./share/man/man1/pullpo-pr-ready.1"
-        man1.install "./share/man/man1/pullpo-pr-reopen.1"
-        man1.install "./share/man/man1/pullpo-pr-review.1"
-        man1.install "./share/man/man1/pullpo-pr-status.1"
-        man1.install "./share/man/man1/pullpo-pr-unlock.1"
-        man1.install "./share/man/man1/pullpo-pr-view.1"
-        man1.install "./share/man/man1/pullpo-pr.1"
-        man1.install "./share/man/man1/pullpo-project-close.1"
-        man1.install "./share/man/man1/pullpo-project-copy.1"
-        man1.install "./share/man/man1/pullpo-project-create.1"
-        man1.install "./share/man/man1/pullpo-project-delete.1"
-        man1.install "./share/man/man1/pullpo-project-edit.1"
-        man1.install "./share/man/man1/pullpo-project-field-create.1"
-        man1.install "./share/man/man1/pullpo-project-field-delete.1"
-        man1.install "./share/man/man1/pullpo-project-field-list.1"
-        man1.install "./share/man/man1/pullpo-project-item-add.1"
-        man1.install "./share/man/man1/pullpo-project-item-archive.1"
-        man1.install "./share/man/man1/pullpo-project-item-create.1"
-        man1.install "./share/man/man1/pullpo-project-item-delete.1"
-        man1.install "./share/man/man1/pullpo-project-item-edit.1"
-        man1.install "./share/man/man1/pullpo-project-item-list.1"
-        man1.install "./share/man/man1/pullpo-project-list.1"
-        man1.install "./share/man/man1/pullpo-project-mark-template.1"
-        man1.install "./share/man/man1/pullpo-project-view.1"
-        man1.install "./share/man/man1/pullpo-project.1"
-        man1.install "./share/man/man1/pullpo-release-create.1"
-        man1.install "./share/man/man1/pullpo-release-delete-asset.1"
-        man1.install "./share/man/man1/pullpo-release-delete.1"
-        man1.install "./share/man/man1/pullpo-release-download.1"
-        man1.install "./share/man/man1/pullpo-release-edit.1"
-        man1.install "./share/man/man1/pullpo-release-list.1"
-        man1.install "./share/man/man1/pullpo-release-upload.1"
-        man1.install "./share/man/man1/pullpo-release-view.1"
-        man1.install "./share/man/man1/pullpo-release.1"
-        man1.install "./share/man/man1/pullpo-repo-archive.1"
-        man1.install "./share/man/man1/pullpo-repo-clone.1"
-        man1.install "./share/man/man1/pullpo-repo-create.1"
-        man1.install "./share/man/man1/pullpo-repo-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-add.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-list.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key.1"
-        man1.install "./share/man/man1/pullpo-repo-edit.1"
-        man1.install "./share/man/man1/pullpo-repo-fork.1"
-        man1.install "./share/man/man1/pullpo-repo-list.1"
-        man1.install "./share/man/man1/pullpo-repo-rename.1"
-        man1.install "./share/man/man1/pullpo-repo-set-default.1"
-        man1.install "./share/man/man1/pullpo-repo-sync.1"
-        man1.install "./share/man/man1/pullpo-repo-unarchive.1"
-        man1.install "./share/man/man1/pullpo-repo-view.1"
-        man1.install "./share/man/man1/pullpo-repo.1"
-        man1.install "./share/man/man1/pullpo-ruleset-check.1"
-        man1.install "./share/man/man1/pullpo-ruleset-list.1"
-        man1.install "./share/man/man1/pullpo-ruleset-view.1"
-        man1.install "./share/man/man1/pullpo-ruleset.1"
-        man1.install "./share/man/man1/pullpo-run-cancel.1"
-        man1.install "./share/man/man1/pullpo-run-delete.1"
-        man1.install "./share/man/man1/pullpo-run-download.1"
-        man1.install "./share/man/man1/pullpo-run-list.1"
-        man1.install "./share/man/man1/pullpo-run-rerun.1"
-        man1.install "./share/man/man1/pullpo-run-view.1"
-        man1.install "./share/man/man1/pullpo-run-watch.1"
-        man1.install "./share/man/man1/pullpo-run.1"
-        man1.install "./share/man/man1/pullpo-search-code.1"
-        man1.install "./share/man/man1/pullpo-search-commits.1"
-        man1.install "./share/man/man1/pullpo-search-issues.1"
-        man1.install "./share/man/man1/pullpo-search-prs.1"
-        man1.install "./share/man/man1/pullpo-search-repos.1"
-        man1.install "./share/man/man1/pullpo-search.1"
-        man1.install "./share/man/man1/pullpo-secret-delete.1"
-        man1.install "./share/man/man1/pullpo-secret-list.1"
-        man1.install "./share/man/man1/pullpo-secret-set.1"
-        man1.install "./share/man/man1/pullpo-secret.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-add.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-delete.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-list.1"
-        man1.install "./share/man/man1/pullpo-ssh-key.1"
-        man1.install "./share/man/man1/pullpo-status.1"
-        man1.install "./share/man/man1/pullpo-variable-delete.1"
-        man1.install "./share/man/man1/pullpo-variable-list.1"
-        man1.install "./share/man/man1/pullpo-variable-set.1"
-        man1.install "./share/man/man1/pullpo-variable.1"
-        man1.install "./share/man/man1/pullpo-workflow-disable.1"
-        man1.install "./share/man/man1/pullpo-workflow-enable.1"
-        man1.install "./share/man/man1/pullpo-workflow-list.1"
-        man1.install "./share/man/man1/pullpo-workflow-run.1"
-        man1.install "./share/man/man1/pullpo-workflow-view.1"
-        man1.install "./share/man/man1/pullpo-workflow.1"
-        man1.install "./share/man/man1/pullpo.1
+        man1.install("./share/man/man1/pullpo-alias-delete.1")
+        man1.install("./share/man/man1/pullpo-alias-import.1")
+        man1.install("./share/man/man1/pullpo-alias-list.1")
+        man1.install("./share/man/man1/pullpo-alias-set.1")
+        man1.install("./share/man/man1/pullpo-alias.1")
+        man1.install("./share/man/man1/pullpo-api.1")
+        man1.install("./share/man/man1/pullpo-auth-login.1")
+        man1.install("./share/man/man1/pullpo-auth-logout.1")
+        man1.install("./share/man/man1/pullpo-auth-refresh.1")
+        man1.install("./share/man/man1/pullpo-auth-setup-git.1")
+        man1.install("./share/man/man1/pullpo-auth-status.1")
+        man1.install("./share/man/man1/pullpo-auth-token.1")
+        man1.install("./share/man/man1/pullpo-auth.1")
+        man1.install("./share/man/man1/pullpo-browse.1")
+        man1.install("./share/man/man1/pullpo-cache-delete.1")
+        man1.install("./share/man/man1/pullpo-cache-list.1")
+        man1.install("./share/man/man1/pullpo-cache.1")
+        man1.install("./share/man/man1/pullpo-codespace-code.1")
+        man1.install("./share/man/man1/pullpo-codespace-cp.1")
+        man1.install("./share/man/man1/pullpo-codespace-create.1")
+        man1.install("./share/man/man1/pullpo-codespace-delete.1")
+        man1.install("./share/man/man1/pullpo-codespace-edit.1")
+        man1.install("./share/man/man1/pullpo-codespace-jupyter.1")
+        man1.install("./share/man/man1/pullpo-codespace-list.1")
+        man1.install("./share/man/man1/pullpo-codespace-logs.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-forward.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-visibility.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports.1")
+        man1.install("./share/man/man1/pullpo-codespace-rebuild.1")
+        man1.install("./share/man/man1/pullpo-codespace-ssh.1")
+        man1.install("./share/man/man1/pullpo-codespace-stop.1")
+        man1.install("./share/man/man1/pullpo-codespace-view.1")
+        man1.install("./share/man/man1/pullpo-codespace.1")
+        man1.install("./share/man/man1/pullpo-completion.1")
+        man1.install("./share/man/man1/pullpo-config-clear-cache.1")
+        man1.install("./share/man/man1/pullpo-config-get.1")
+        man1.install("./share/man/man1/pullpo-config-list.1")
+        man1.install("./share/man/man1/pullpo-config-set.1")
+        man1.install("./share/man/man1/pullpo-config.1")
+        man1.install("./share/man/man1/pullpo-extension-browse.1")
+        man1.install("./share/man/man1/pullpo-extension-create.1")
+        man1.install("./share/man/man1/pullpo-extension-exec.1")
+        man1.install("./share/man/man1/pullpo-extension-install.1")
+        man1.install("./share/man/man1/pullpo-extension-list.1")
+        man1.install("./share/man/man1/pullpo-extension-remove.1")
+        man1.install("./share/man/man1/pullpo-extension-search.1")
+        man1.install("./share/man/man1/pullpo-extension-upgrade.1")
+        man1.install("./share/man/man1/pullpo-extension.1")
+        man1.install("./share/man/man1/pullpo-gist-clone.1")
+        man1.install("./share/man/man1/pullpo-gist-create.1")
+        man1.install("./share/man/man1/pullpo-gist-delete.1")
+        man1.install("./share/man/man1/pullpo-gist-edit.1")
+        man1.install("./share/man/man1/pullpo-gist-list.1")
+        man1.install("./share/man/man1/pullpo-gist-rename.1")
+        man1.install("./share/man/man1/pullpo-gist-view.1")
+        man1.install("./share/man/man1/pullpo-gist.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-add.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-delete.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-list.1")
+        man1.install("./share/man/man1/pullpo-gpg-key.1")
+        man1.install("./share/man/man1/pullpo-issue-close.1")
+        man1.install("./share/man/man1/pullpo-issue-comment.1")
+        man1.install("./share/man/man1/pullpo-issue-create.1")
+        man1.install("./share/man/man1/pullpo-issue-delete.1")
+        man1.install("./share/man/man1/pullpo-issue-develop.1")
+        man1.install("./share/man/man1/pullpo-issue-edit.1")
+        man1.install("./share/man/man1/pullpo-issue-list.1")
+        man1.install("./share/man/man1/pullpo-issue-lock.1")
+        man1.install("./share/man/man1/pullpo-issue-pin.1")
+        man1.install("./share/man/man1/pullpo-issue-reopen.1")
+        man1.install("./share/man/man1/pullpo-issue-status.1")
+        man1.install("./share/man/man1/pullpo-issue-transfer.1")
+        man1.install("./share/man/man1/pullpo-issue-unlock.1")
+        man1.install("./share/man/man1/pullpo-issue-unpin.1")
+        man1.install("./share/man/man1/pullpo-issue-view.1")
+        man1.install("./share/man/man1/pullpo-issue.1")
+        man1.install("./share/man/man1/pullpo-label-clone.1")
+        man1.install("./share/man/man1/pullpo-label-create.1")
+        man1.install("./share/man/man1/pullpo-label-delete.1")
+        man1.install("./share/man/man1/pullpo-label-edit.1")
+        man1.install("./share/man/man1/pullpo-label-list.1")
+        man1.install("./share/man/man1/pullpo-label.1")
+        man1.install("./share/man/man1/pullpo-org-list.1")
+        man1.install("./share/man/man1/pullpo-org.1")
+        man1.install("./share/man/man1/pullpo-pr-checkout.1")
+        man1.install("./share/man/man1/pullpo-pr-checks.1")
+        man1.install("./share/man/man1/pullpo-pr-close.1")
+        man1.install("./share/man/man1/pullpo-pr-comment.1")
+        man1.install("./share/man/man1/pullpo-pr-create.1")
+        man1.install("./share/man/man1/pullpo-pr-diff.1")
+        man1.install("./share/man/man1/pullpo-pr-edit.1")
+        man1.install("./share/man/man1/pullpo-pr-list.1")
+        man1.install("./share/man/man1/pullpo-pr-lock.1")
+        man1.install("./share/man/man1/pullpo-pr-merge.1")
+        man1.install("./share/man/man1/pullpo-pr-ready.1")
+        man1.install("./share/man/man1/pullpo-pr-reopen.1")
+        man1.install("./share/man/man1/pullpo-pr-review.1")
+        man1.install("./share/man/man1/pullpo-pr-status.1")
+        man1.install("./share/man/man1/pullpo-pr-unlock.1")
+        man1.install("./share/man/man1/pullpo-pr-view.1")
+        man1.install("./share/man/man1/pullpo-pr.1")
+        man1.install("./share/man/man1/pullpo-project-close.1")
+        man1.install("./share/man/man1/pullpo-project-copy.1")
+        man1.install("./share/man/man1/pullpo-project-create.1")
+        man1.install("./share/man/man1/pullpo-project-delete.1")
+        man1.install("./share/man/man1/pullpo-project-edit.1")
+        man1.install("./share/man/man1/pullpo-project-field-create.1")
+        man1.install("./share/man/man1/pullpo-project-field-delete.1")
+        man1.install("./share/man/man1/pullpo-project-field-list.1")
+        man1.install("./share/man/man1/pullpo-project-item-add.1")
+        man1.install("./share/man/man1/pullpo-project-item-archive.1")
+        man1.install("./share/man/man1/pullpo-project-item-create.1")
+        man1.install("./share/man/man1/pullpo-project-item-delete.1")
+        man1.install("./share/man/man1/pullpo-project-item-edit.1")
+        man1.install("./share/man/man1/pullpo-project-item-list.1")
+        man1.install("./share/man/man1/pullpo-project-list.1")
+        man1.install("./share/man/man1/pullpo-project-mark-template.1")
+        man1.install("./share/man/man1/pullpo-project-view.1")
+        man1.install("./share/man/man1/pullpo-project.1")
+        man1.install("./share/man/man1/pullpo-release-create.1")
+        man1.install("./share/man/man1/pullpo-release-delete-asset.1")
+        man1.install("./share/man/man1/pullpo-release-delete.1")
+        man1.install("./share/man/man1/pullpo-release-download.1")
+        man1.install("./share/man/man1/pullpo-release-edit.1")
+        man1.install("./share/man/man1/pullpo-release-list.1")
+        man1.install("./share/man/man1/pullpo-release-upload.1")
+        man1.install("./share/man/man1/pullpo-release-view.1")
+        man1.install("./share/man/man1/pullpo-release.1")
+        man1.install("./share/man/man1/pullpo-repo-archive.1")
+        man1.install("./share/man/man1/pullpo-repo-clone.1")
+        man1.install("./share/man/man1/pullpo-repo-create.1")
+        man1.install("./share/man/man1/pullpo-repo-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-add.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-list.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key.1")
+        man1.install("./share/man/man1/pullpo-repo-edit.1")
+        man1.install("./share/man/man1/pullpo-repo-fork.1")
+        man1.install("./share/man/man1/pullpo-repo-list.1")
+        man1.install("./share/man/man1/pullpo-repo-rename.1")
+        man1.install("./share/man/man1/pullpo-repo-set-default.1")
+        man1.install("./share/man/man1/pullpo-repo-sync.1")
+        man1.install("./share/man/man1/pullpo-repo-unarchive.1")
+        man1.install("./share/man/man1/pullpo-repo-view.1")
+        man1.install("./share/man/man1/pullpo-repo.1")
+        man1.install("./share/man/man1/pullpo-ruleset-check.1")
+        man1.install("./share/man/man1/pullpo-ruleset-list.1")
+        man1.install("./share/man/man1/pullpo-ruleset-view.1")
+        man1.install("./share/man/man1/pullpo-ruleset.1")
+        man1.install("./share/man/man1/pullpo-run-cancel.1")
+        man1.install("./share/man/man1/pullpo-run-delete.1")
+        man1.install("./share/man/man1/pullpo-run-download.1")
+        man1.install("./share/man/man1/pullpo-run-list.1")
+        man1.install("./share/man/man1/pullpo-run-rerun.1")
+        man1.install("./share/man/man1/pullpo-run-view.1")
+        man1.install("./share/man/man1/pullpo-run-watch.1")
+        man1.install("./share/man/man1/pullpo-run.1")
+        man1.install("./share/man/man1/pullpo-search-code.1")
+        man1.install("./share/man/man1/pullpo-search-commits.1")
+        man1.install("./share/man/man1/pullpo-search-issues.1")
+        man1.install("./share/man/man1/pullpo-search-prs.1")
+        man1.install("./share/man/man1/pullpo-search-repos.1")
+        man1.install("./share/man/man1/pullpo-search.1")
+        man1.install("./share/man/man1/pullpo-secret-delete.1")
+        man1.install("./share/man/man1/pullpo-secret-list.1")
+        man1.install("./share/man/man1/pullpo-secret-set.1")
+        man1.install("./share/man/man1/pullpo-secret.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-add.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-delete.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-list.1")
+        man1.install("./share/man/man1/pullpo-ssh-key.1")
+        man1.install("./share/man/man1/pullpo-status.1")
+        man1.install("./share/man/man1/pullpo-variable-delete.1")
+        man1.install("./share/man/man1/pullpo-variable-list.1")
+        man1.install("./share/man/man1/pullpo-variable-set.1")
+        man1.install("./share/man/man1/pullpo-variable.1")
+        man1.install("./share/man/man1/pullpo-workflow-disable.1")
+        man1.install("./share/man/man1/pullpo-workflow-enable.1")
+        man1.install("./share/man/man1/pullpo-workflow-list.1")
+        man1.install("./share/man/man1/pullpo-workflow-run.1")
+        man1.install("./share/man/man1/pullpo-workflow-view.1")
+        man1.install("./share/man/man1/pullpo-workflow.1")
+        man1.install("./share/man/man1/pullpo.1)
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.7/pullpo_0.7_linux_arm64.tar.gz"
-      sha256 "54f7001fa361fb1d73386fd9075539fe6e7d8d0717243fee94ce5dd69110154d"
+      url "https://github.com/pullpo-io/cli/releases/download/v0.8/pullpo_0.8_linux_arm64.tar.gz"
+      sha256 "acf8f21c94d5bf51296d2ea25d2a42999568f86875316f5e132100b54c5b9d84"
 
       def install
         bin.install "bin/pullpo"
-        man1.install "./share/man/man1/pullpo-alias-delete.1"
-        man1.install "./share/man/man1/pullpo-alias-import.1"
-        man1.install "./share/man/man1/pullpo-alias-list.1"
-        man1.install "./share/man/man1/pullpo-alias-set.1"
-        man1.install "./share/man/man1/pullpo-alias.1"
-        man1.install "./share/man/man1/pullpo-api.1"
-        man1.install "./share/man/man1/pullpo-auth-login.1"
-        man1.install "./share/man/man1/pullpo-auth-logout.1"
-        man1.install "./share/man/man1/pullpo-auth-refresh.1"
-        man1.install "./share/man/man1/pullpo-auth-setup-git.1"
-        man1.install "./share/man/man1/pullpo-auth-status.1"
-        man1.install "./share/man/man1/pullpo-auth-token.1"
-        man1.install "./share/man/man1/pullpo-auth.1"
-        man1.install "./share/man/man1/pullpo-browse.1"
-        man1.install "./share/man/man1/pullpo-cache-delete.1"
-        man1.install "./share/man/man1/pullpo-cache-list.1"
-        man1.install "./share/man/man1/pullpo-cache.1"
-        man1.install "./share/man/man1/pullpo-codespace-code.1"
-        man1.install "./share/man/man1/pullpo-codespace-cp.1"
-        man1.install "./share/man/man1/pullpo-codespace-create.1"
-        man1.install "./share/man/man1/pullpo-codespace-delete.1"
-        man1.install "./share/man/man1/pullpo-codespace-edit.1"
-        man1.install "./share/man/man1/pullpo-codespace-jupyter.1"
-        man1.install "./share/man/man1/pullpo-codespace-list.1"
-        man1.install "./share/man/man1/pullpo-codespace-logs.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-forward.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-visibility.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports.1"
-        man1.install "./share/man/man1/pullpo-codespace-rebuild.1"
-        man1.install "./share/man/man1/pullpo-codespace-ssh.1"
-        man1.install "./share/man/man1/pullpo-codespace-stop.1"
-        man1.install "./share/man/man1/pullpo-codespace-view.1"
-        man1.install "./share/man/man1/pullpo-codespace.1"
-        man1.install "./share/man/man1/pullpo-completion.1"
-        man1.install "./share/man/man1/pullpo-config-clear-cache.1"
-        man1.install "./share/man/man1/pullpo-config-get.1"
-        man1.install "./share/man/man1/pullpo-config-list.1"
-        man1.install "./share/man/man1/pullpo-config-set.1"
-        man1.install "./share/man/man1/pullpo-config.1"
-        man1.install "./share/man/man1/pullpo-extension-browse.1"
-        man1.install "./share/man/man1/pullpo-extension-create.1"
-        man1.install "./share/man/man1/pullpo-extension-exec.1"
-        man1.install "./share/man/man1/pullpo-extension-install.1"
-        man1.install "./share/man/man1/pullpo-extension-list.1"
-        man1.install "./share/man/man1/pullpo-extension-remove.1"
-        man1.install "./share/man/man1/pullpo-extension-search.1"
-        man1.install "./share/man/man1/pullpo-extension-upgrade.1"
-        man1.install "./share/man/man1/pullpo-extension.1"
-        man1.install "./share/man/man1/pullpo-gist-clone.1"
-        man1.install "./share/man/man1/pullpo-gist-create.1"
-        man1.install "./share/man/man1/pullpo-gist-delete.1"
-        man1.install "./share/man/man1/pullpo-gist-edit.1"
-        man1.install "./share/man/man1/pullpo-gist-list.1"
-        man1.install "./share/man/man1/pullpo-gist-rename.1"
-        man1.install "./share/man/man1/pullpo-gist-view.1"
-        man1.install "./share/man/man1/pullpo-gist.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-add.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-delete.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-list.1"
-        man1.install "./share/man/man1/pullpo-gpg-key.1"
-        man1.install "./share/man/man1/pullpo-issue-close.1"
-        man1.install "./share/man/man1/pullpo-issue-comment.1"
-        man1.install "./share/man/man1/pullpo-issue-create.1"
-        man1.install "./share/man/man1/pullpo-issue-delete.1"
-        man1.install "./share/man/man1/pullpo-issue-develop.1"
-        man1.install "./share/man/man1/pullpo-issue-edit.1"
-        man1.install "./share/man/man1/pullpo-issue-list.1"
-        man1.install "./share/man/man1/pullpo-issue-lock.1"
-        man1.install "./share/man/man1/pullpo-issue-pin.1"
-        man1.install "./share/man/man1/pullpo-issue-reopen.1"
-        man1.install "./share/man/man1/pullpo-issue-status.1"
-        man1.install "./share/man/man1/pullpo-issue-transfer.1"
-        man1.install "./share/man/man1/pullpo-issue-unlock.1"
-        man1.install "./share/man/man1/pullpo-issue-unpin.1"
-        man1.install "./share/man/man1/pullpo-issue-view.1"
-        man1.install "./share/man/man1/pullpo-issue.1"
-        man1.install "./share/man/man1/pullpo-label-clone.1"
-        man1.install "./share/man/man1/pullpo-label-create.1"
-        man1.install "./share/man/man1/pullpo-label-delete.1"
-        man1.install "./share/man/man1/pullpo-label-edit.1"
-        man1.install "./share/man/man1/pullpo-label-list.1"
-        man1.install "./share/man/man1/pullpo-label.1"
-        man1.install "./share/man/man1/pullpo-org-list.1"
-        man1.install "./share/man/man1/pullpo-org.1"
-        man1.install "./share/man/man1/pullpo-pr-checkout.1"
-        man1.install "./share/man/man1/pullpo-pr-checks.1"
-        man1.install "./share/man/man1/pullpo-pr-close.1"
-        man1.install "./share/man/man1/pullpo-pr-comment.1"
-        man1.install "./share/man/man1/pullpo-pr-create.1"
-        man1.install "./share/man/man1/pullpo-pr-diff.1"
-        man1.install "./share/man/man1/pullpo-pr-edit.1"
-        man1.install "./share/man/man1/pullpo-pr-list.1"
-        man1.install "./share/man/man1/pullpo-pr-lock.1"
-        man1.install "./share/man/man1/pullpo-pr-merge.1"
-        man1.install "./share/man/man1/pullpo-pr-ready.1"
-        man1.install "./share/man/man1/pullpo-pr-reopen.1"
-        man1.install "./share/man/man1/pullpo-pr-review.1"
-        man1.install "./share/man/man1/pullpo-pr-status.1"
-        man1.install "./share/man/man1/pullpo-pr-unlock.1"
-        man1.install "./share/man/man1/pullpo-pr-view.1"
-        man1.install "./share/man/man1/pullpo-pr.1"
-        man1.install "./share/man/man1/pullpo-project-close.1"
-        man1.install "./share/man/man1/pullpo-project-copy.1"
-        man1.install "./share/man/man1/pullpo-project-create.1"
-        man1.install "./share/man/man1/pullpo-project-delete.1"
-        man1.install "./share/man/man1/pullpo-project-edit.1"
-        man1.install "./share/man/man1/pullpo-project-field-create.1"
-        man1.install "./share/man/man1/pullpo-project-field-delete.1"
-        man1.install "./share/man/man1/pullpo-project-field-list.1"
-        man1.install "./share/man/man1/pullpo-project-item-add.1"
-        man1.install "./share/man/man1/pullpo-project-item-archive.1"
-        man1.install "./share/man/man1/pullpo-project-item-create.1"
-        man1.install "./share/man/man1/pullpo-project-item-delete.1"
-        man1.install "./share/man/man1/pullpo-project-item-edit.1"
-        man1.install "./share/man/man1/pullpo-project-item-list.1"
-        man1.install "./share/man/man1/pullpo-project-list.1"
-        man1.install "./share/man/man1/pullpo-project-mark-template.1"
-        man1.install "./share/man/man1/pullpo-project-view.1"
-        man1.install "./share/man/man1/pullpo-project.1"
-        man1.install "./share/man/man1/pullpo-release-create.1"
-        man1.install "./share/man/man1/pullpo-release-delete-asset.1"
-        man1.install "./share/man/man1/pullpo-release-delete.1"
-        man1.install "./share/man/man1/pullpo-release-download.1"
-        man1.install "./share/man/man1/pullpo-release-edit.1"
-        man1.install "./share/man/man1/pullpo-release-list.1"
-        man1.install "./share/man/man1/pullpo-release-upload.1"
-        man1.install "./share/man/man1/pullpo-release-view.1"
-        man1.install "./share/man/man1/pullpo-release.1"
-        man1.install "./share/man/man1/pullpo-repo-archive.1"
-        man1.install "./share/man/man1/pullpo-repo-clone.1"
-        man1.install "./share/man/man1/pullpo-repo-create.1"
-        man1.install "./share/man/man1/pullpo-repo-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-add.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-list.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key.1"
-        man1.install "./share/man/man1/pullpo-repo-edit.1"
-        man1.install "./share/man/man1/pullpo-repo-fork.1"
-        man1.install "./share/man/man1/pullpo-repo-list.1"
-        man1.install "./share/man/man1/pullpo-repo-rename.1"
-        man1.install "./share/man/man1/pullpo-repo-set-default.1"
-        man1.install "./share/man/man1/pullpo-repo-sync.1"
-        man1.install "./share/man/man1/pullpo-repo-unarchive.1"
-        man1.install "./share/man/man1/pullpo-repo-view.1"
-        man1.install "./share/man/man1/pullpo-repo.1"
-        man1.install "./share/man/man1/pullpo-ruleset-check.1"
-        man1.install "./share/man/man1/pullpo-ruleset-list.1"
-        man1.install "./share/man/man1/pullpo-ruleset-view.1"
-        man1.install "./share/man/man1/pullpo-ruleset.1"
-        man1.install "./share/man/man1/pullpo-run-cancel.1"
-        man1.install "./share/man/man1/pullpo-run-delete.1"
-        man1.install "./share/man/man1/pullpo-run-download.1"
-        man1.install "./share/man/man1/pullpo-run-list.1"
-        man1.install "./share/man/man1/pullpo-run-rerun.1"
-        man1.install "./share/man/man1/pullpo-run-view.1"
-        man1.install "./share/man/man1/pullpo-run-watch.1"
-        man1.install "./share/man/man1/pullpo-run.1"
-        man1.install "./share/man/man1/pullpo-search-code.1"
-        man1.install "./share/man/man1/pullpo-search-commits.1"
-        man1.install "./share/man/man1/pullpo-search-issues.1"
-        man1.install "./share/man/man1/pullpo-search-prs.1"
-        man1.install "./share/man/man1/pullpo-search-repos.1"
-        man1.install "./share/man/man1/pullpo-search.1"
-        man1.install "./share/man/man1/pullpo-secret-delete.1"
-        man1.install "./share/man/man1/pullpo-secret-list.1"
-        man1.install "./share/man/man1/pullpo-secret-set.1"
-        man1.install "./share/man/man1/pullpo-secret.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-add.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-delete.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-list.1"
-        man1.install "./share/man/man1/pullpo-ssh-key.1"
-        man1.install "./share/man/man1/pullpo-status.1"
-        man1.install "./share/man/man1/pullpo-variable-delete.1"
-        man1.install "./share/man/man1/pullpo-variable-list.1"
-        man1.install "./share/man/man1/pullpo-variable-set.1"
-        man1.install "./share/man/man1/pullpo-variable.1"
-        man1.install "./share/man/man1/pullpo-workflow-disable.1"
-        man1.install "./share/man/man1/pullpo-workflow-enable.1"
-        man1.install "./share/man/man1/pullpo-workflow-list.1"
-        man1.install "./share/man/man1/pullpo-workflow-run.1"
-        man1.install "./share/man/man1/pullpo-workflow-view.1"
-        man1.install "./share/man/man1/pullpo-workflow.1"
-        man1.install "./share/man/man1/pullpo.1
+        man1.install("./share/man/man1/pullpo-alias-delete.1")
+        man1.install("./share/man/man1/pullpo-alias-import.1")
+        man1.install("./share/man/man1/pullpo-alias-list.1")
+        man1.install("./share/man/man1/pullpo-alias-set.1")
+        man1.install("./share/man/man1/pullpo-alias.1")
+        man1.install("./share/man/man1/pullpo-api.1")
+        man1.install("./share/man/man1/pullpo-auth-login.1")
+        man1.install("./share/man/man1/pullpo-auth-logout.1")
+        man1.install("./share/man/man1/pullpo-auth-refresh.1")
+        man1.install("./share/man/man1/pullpo-auth-setup-git.1")
+        man1.install("./share/man/man1/pullpo-auth-status.1")
+        man1.install("./share/man/man1/pullpo-auth-token.1")
+        man1.install("./share/man/man1/pullpo-auth.1")
+        man1.install("./share/man/man1/pullpo-browse.1")
+        man1.install("./share/man/man1/pullpo-cache-delete.1")
+        man1.install("./share/man/man1/pullpo-cache-list.1")
+        man1.install("./share/man/man1/pullpo-cache.1")
+        man1.install("./share/man/man1/pullpo-codespace-code.1")
+        man1.install("./share/man/man1/pullpo-codespace-cp.1")
+        man1.install("./share/man/man1/pullpo-codespace-create.1")
+        man1.install("./share/man/man1/pullpo-codespace-delete.1")
+        man1.install("./share/man/man1/pullpo-codespace-edit.1")
+        man1.install("./share/man/man1/pullpo-codespace-jupyter.1")
+        man1.install("./share/man/man1/pullpo-codespace-list.1")
+        man1.install("./share/man/man1/pullpo-codespace-logs.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-forward.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-visibility.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports.1")
+        man1.install("./share/man/man1/pullpo-codespace-rebuild.1")
+        man1.install("./share/man/man1/pullpo-codespace-ssh.1")
+        man1.install("./share/man/man1/pullpo-codespace-stop.1")
+        man1.install("./share/man/man1/pullpo-codespace-view.1")
+        man1.install("./share/man/man1/pullpo-codespace.1")
+        man1.install("./share/man/man1/pullpo-completion.1")
+        man1.install("./share/man/man1/pullpo-config-clear-cache.1")
+        man1.install("./share/man/man1/pullpo-config-get.1")
+        man1.install("./share/man/man1/pullpo-config-list.1")
+        man1.install("./share/man/man1/pullpo-config-set.1")
+        man1.install("./share/man/man1/pullpo-config.1")
+        man1.install("./share/man/man1/pullpo-extension-browse.1")
+        man1.install("./share/man/man1/pullpo-extension-create.1")
+        man1.install("./share/man/man1/pullpo-extension-exec.1")
+        man1.install("./share/man/man1/pullpo-extension-install.1")
+        man1.install("./share/man/man1/pullpo-extension-list.1")
+        man1.install("./share/man/man1/pullpo-extension-remove.1")
+        man1.install("./share/man/man1/pullpo-extension-search.1")
+        man1.install("./share/man/man1/pullpo-extension-upgrade.1")
+        man1.install("./share/man/man1/pullpo-extension.1")
+        man1.install("./share/man/man1/pullpo-gist-clone.1")
+        man1.install("./share/man/man1/pullpo-gist-create.1")
+        man1.install("./share/man/man1/pullpo-gist-delete.1")
+        man1.install("./share/man/man1/pullpo-gist-edit.1")
+        man1.install("./share/man/man1/pullpo-gist-list.1")
+        man1.install("./share/man/man1/pullpo-gist-rename.1")
+        man1.install("./share/man/man1/pullpo-gist-view.1")
+        man1.install("./share/man/man1/pullpo-gist.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-add.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-delete.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-list.1")
+        man1.install("./share/man/man1/pullpo-gpg-key.1")
+        man1.install("./share/man/man1/pullpo-issue-close.1")
+        man1.install("./share/man/man1/pullpo-issue-comment.1")
+        man1.install("./share/man/man1/pullpo-issue-create.1")
+        man1.install("./share/man/man1/pullpo-issue-delete.1")
+        man1.install("./share/man/man1/pullpo-issue-develop.1")
+        man1.install("./share/man/man1/pullpo-issue-edit.1")
+        man1.install("./share/man/man1/pullpo-issue-list.1")
+        man1.install("./share/man/man1/pullpo-issue-lock.1")
+        man1.install("./share/man/man1/pullpo-issue-pin.1")
+        man1.install("./share/man/man1/pullpo-issue-reopen.1")
+        man1.install("./share/man/man1/pullpo-issue-status.1")
+        man1.install("./share/man/man1/pullpo-issue-transfer.1")
+        man1.install("./share/man/man1/pullpo-issue-unlock.1")
+        man1.install("./share/man/man1/pullpo-issue-unpin.1")
+        man1.install("./share/man/man1/pullpo-issue-view.1")
+        man1.install("./share/man/man1/pullpo-issue.1")
+        man1.install("./share/man/man1/pullpo-label-clone.1")
+        man1.install("./share/man/man1/pullpo-label-create.1")
+        man1.install("./share/man/man1/pullpo-label-delete.1")
+        man1.install("./share/man/man1/pullpo-label-edit.1")
+        man1.install("./share/man/man1/pullpo-label-list.1")
+        man1.install("./share/man/man1/pullpo-label.1")
+        man1.install("./share/man/man1/pullpo-org-list.1")
+        man1.install("./share/man/man1/pullpo-org.1")
+        man1.install("./share/man/man1/pullpo-pr-checkout.1")
+        man1.install("./share/man/man1/pullpo-pr-checks.1")
+        man1.install("./share/man/man1/pullpo-pr-close.1")
+        man1.install("./share/man/man1/pullpo-pr-comment.1")
+        man1.install("./share/man/man1/pullpo-pr-create.1")
+        man1.install("./share/man/man1/pullpo-pr-diff.1")
+        man1.install("./share/man/man1/pullpo-pr-edit.1")
+        man1.install("./share/man/man1/pullpo-pr-list.1")
+        man1.install("./share/man/man1/pullpo-pr-lock.1")
+        man1.install("./share/man/man1/pullpo-pr-merge.1")
+        man1.install("./share/man/man1/pullpo-pr-ready.1")
+        man1.install("./share/man/man1/pullpo-pr-reopen.1")
+        man1.install("./share/man/man1/pullpo-pr-review.1")
+        man1.install("./share/man/man1/pullpo-pr-status.1")
+        man1.install("./share/man/man1/pullpo-pr-unlock.1")
+        man1.install("./share/man/man1/pullpo-pr-view.1")
+        man1.install("./share/man/man1/pullpo-pr.1")
+        man1.install("./share/man/man1/pullpo-project-close.1")
+        man1.install("./share/man/man1/pullpo-project-copy.1")
+        man1.install("./share/man/man1/pullpo-project-create.1")
+        man1.install("./share/man/man1/pullpo-project-delete.1")
+        man1.install("./share/man/man1/pullpo-project-edit.1")
+        man1.install("./share/man/man1/pullpo-project-field-create.1")
+        man1.install("./share/man/man1/pullpo-project-field-delete.1")
+        man1.install("./share/man/man1/pullpo-project-field-list.1")
+        man1.install("./share/man/man1/pullpo-project-item-add.1")
+        man1.install("./share/man/man1/pullpo-project-item-archive.1")
+        man1.install("./share/man/man1/pullpo-project-item-create.1")
+        man1.install("./share/man/man1/pullpo-project-item-delete.1")
+        man1.install("./share/man/man1/pullpo-project-item-edit.1")
+        man1.install("./share/man/man1/pullpo-project-item-list.1")
+        man1.install("./share/man/man1/pullpo-project-list.1")
+        man1.install("./share/man/man1/pullpo-project-mark-template.1")
+        man1.install("./share/man/man1/pullpo-project-view.1")
+        man1.install("./share/man/man1/pullpo-project.1")
+        man1.install("./share/man/man1/pullpo-release-create.1")
+        man1.install("./share/man/man1/pullpo-release-delete-asset.1")
+        man1.install("./share/man/man1/pullpo-release-delete.1")
+        man1.install("./share/man/man1/pullpo-release-download.1")
+        man1.install("./share/man/man1/pullpo-release-edit.1")
+        man1.install("./share/man/man1/pullpo-release-list.1")
+        man1.install("./share/man/man1/pullpo-release-upload.1")
+        man1.install("./share/man/man1/pullpo-release-view.1")
+        man1.install("./share/man/man1/pullpo-release.1")
+        man1.install("./share/man/man1/pullpo-repo-archive.1")
+        man1.install("./share/man/man1/pullpo-repo-clone.1")
+        man1.install("./share/man/man1/pullpo-repo-create.1")
+        man1.install("./share/man/man1/pullpo-repo-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-add.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-list.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key.1")
+        man1.install("./share/man/man1/pullpo-repo-edit.1")
+        man1.install("./share/man/man1/pullpo-repo-fork.1")
+        man1.install("./share/man/man1/pullpo-repo-list.1")
+        man1.install("./share/man/man1/pullpo-repo-rename.1")
+        man1.install("./share/man/man1/pullpo-repo-set-default.1")
+        man1.install("./share/man/man1/pullpo-repo-sync.1")
+        man1.install("./share/man/man1/pullpo-repo-unarchive.1")
+        man1.install("./share/man/man1/pullpo-repo-view.1")
+        man1.install("./share/man/man1/pullpo-repo.1")
+        man1.install("./share/man/man1/pullpo-ruleset-check.1")
+        man1.install("./share/man/man1/pullpo-ruleset-list.1")
+        man1.install("./share/man/man1/pullpo-ruleset-view.1")
+        man1.install("./share/man/man1/pullpo-ruleset.1")
+        man1.install("./share/man/man1/pullpo-run-cancel.1")
+        man1.install("./share/man/man1/pullpo-run-delete.1")
+        man1.install("./share/man/man1/pullpo-run-download.1")
+        man1.install("./share/man/man1/pullpo-run-list.1")
+        man1.install("./share/man/man1/pullpo-run-rerun.1")
+        man1.install("./share/man/man1/pullpo-run-view.1")
+        man1.install("./share/man/man1/pullpo-run-watch.1")
+        man1.install("./share/man/man1/pullpo-run.1")
+        man1.install("./share/man/man1/pullpo-search-code.1")
+        man1.install("./share/man/man1/pullpo-search-commits.1")
+        man1.install("./share/man/man1/pullpo-search-issues.1")
+        man1.install("./share/man/man1/pullpo-search-prs.1")
+        man1.install("./share/man/man1/pullpo-search-repos.1")
+        man1.install("./share/man/man1/pullpo-search.1")
+        man1.install("./share/man/man1/pullpo-secret-delete.1")
+        man1.install("./share/man/man1/pullpo-secret-list.1")
+        man1.install("./share/man/man1/pullpo-secret-set.1")
+        man1.install("./share/man/man1/pullpo-secret.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-add.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-delete.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-list.1")
+        man1.install("./share/man/man1/pullpo-ssh-key.1")
+        man1.install("./share/man/man1/pullpo-status.1")
+        man1.install("./share/man/man1/pullpo-variable-delete.1")
+        man1.install("./share/man/man1/pullpo-variable-list.1")
+        man1.install("./share/man/man1/pullpo-variable-set.1")
+        man1.install("./share/man/man1/pullpo-variable.1")
+        man1.install("./share/man/man1/pullpo-workflow-disable.1")
+        man1.install("./share/man/man1/pullpo-workflow-enable.1")
+        man1.install("./share/man/man1/pullpo-workflow-list.1")
+        man1.install("./share/man/man1/pullpo-workflow-run.1")
+        man1.install("./share/man/man1/pullpo-workflow-view.1")
+        man1.install("./share/man/man1/pullpo-workflow.1")
+        man1.install("./share/man/man1/pullpo.1)
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.7/pullpo_0.7_linux_amd64.tar.gz"
-      sha256 "24c90ce5c65f025ce6448db1af54761fa44217e3f59f4c7c64884c2d9e729b58"
+      url "https://github.com/pullpo-io/cli/releases/download/v0.8/pullpo_0.8_linux_amd64.tar.gz"
+      sha256 "6dd37f1741207e9befc7a402d17447c5fad2d44d3edcc0cef27df3ecccd56f9b"
 
       def install
         bin.install "bin/pullpo"
-        man1.install "./share/man/man1/pullpo-alias-delete.1"
-        man1.install "./share/man/man1/pullpo-alias-import.1"
-        man1.install "./share/man/man1/pullpo-alias-list.1"
-        man1.install "./share/man/man1/pullpo-alias-set.1"
-        man1.install "./share/man/man1/pullpo-alias.1"
-        man1.install "./share/man/man1/pullpo-api.1"
-        man1.install "./share/man/man1/pullpo-auth-login.1"
-        man1.install "./share/man/man1/pullpo-auth-logout.1"
-        man1.install "./share/man/man1/pullpo-auth-refresh.1"
-        man1.install "./share/man/man1/pullpo-auth-setup-git.1"
-        man1.install "./share/man/man1/pullpo-auth-status.1"
-        man1.install "./share/man/man1/pullpo-auth-token.1"
-        man1.install "./share/man/man1/pullpo-auth.1"
-        man1.install "./share/man/man1/pullpo-browse.1"
-        man1.install "./share/man/man1/pullpo-cache-delete.1"
-        man1.install "./share/man/man1/pullpo-cache-list.1"
-        man1.install "./share/man/man1/pullpo-cache.1"
-        man1.install "./share/man/man1/pullpo-codespace-code.1"
-        man1.install "./share/man/man1/pullpo-codespace-cp.1"
-        man1.install "./share/man/man1/pullpo-codespace-create.1"
-        man1.install "./share/man/man1/pullpo-codespace-delete.1"
-        man1.install "./share/man/man1/pullpo-codespace-edit.1"
-        man1.install "./share/man/man1/pullpo-codespace-jupyter.1"
-        man1.install "./share/man/man1/pullpo-codespace-list.1"
-        man1.install "./share/man/man1/pullpo-codespace-logs.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-forward.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports-visibility.1"
-        man1.install "./share/man/man1/pullpo-codespace-ports.1"
-        man1.install "./share/man/man1/pullpo-codespace-rebuild.1"
-        man1.install "./share/man/man1/pullpo-codespace-ssh.1"
-        man1.install "./share/man/man1/pullpo-codespace-stop.1"
-        man1.install "./share/man/man1/pullpo-codespace-view.1"
-        man1.install "./share/man/man1/pullpo-codespace.1"
-        man1.install "./share/man/man1/pullpo-completion.1"
-        man1.install "./share/man/man1/pullpo-config-clear-cache.1"
-        man1.install "./share/man/man1/pullpo-config-get.1"
-        man1.install "./share/man/man1/pullpo-config-list.1"
-        man1.install "./share/man/man1/pullpo-config-set.1"
-        man1.install "./share/man/man1/pullpo-config.1"
-        man1.install "./share/man/man1/pullpo-extension-browse.1"
-        man1.install "./share/man/man1/pullpo-extension-create.1"
-        man1.install "./share/man/man1/pullpo-extension-exec.1"
-        man1.install "./share/man/man1/pullpo-extension-install.1"
-        man1.install "./share/man/man1/pullpo-extension-list.1"
-        man1.install "./share/man/man1/pullpo-extension-remove.1"
-        man1.install "./share/man/man1/pullpo-extension-search.1"
-        man1.install "./share/man/man1/pullpo-extension-upgrade.1"
-        man1.install "./share/man/man1/pullpo-extension.1"
-        man1.install "./share/man/man1/pullpo-gist-clone.1"
-        man1.install "./share/man/man1/pullpo-gist-create.1"
-        man1.install "./share/man/man1/pullpo-gist-delete.1"
-        man1.install "./share/man/man1/pullpo-gist-edit.1"
-        man1.install "./share/man/man1/pullpo-gist-list.1"
-        man1.install "./share/man/man1/pullpo-gist-rename.1"
-        man1.install "./share/man/man1/pullpo-gist-view.1"
-        man1.install "./share/man/man1/pullpo-gist.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-add.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-delete.1"
-        man1.install "./share/man/man1/pullpo-gpg-key-list.1"
-        man1.install "./share/man/man1/pullpo-gpg-key.1"
-        man1.install "./share/man/man1/pullpo-issue-close.1"
-        man1.install "./share/man/man1/pullpo-issue-comment.1"
-        man1.install "./share/man/man1/pullpo-issue-create.1"
-        man1.install "./share/man/man1/pullpo-issue-delete.1"
-        man1.install "./share/man/man1/pullpo-issue-develop.1"
-        man1.install "./share/man/man1/pullpo-issue-edit.1"
-        man1.install "./share/man/man1/pullpo-issue-list.1"
-        man1.install "./share/man/man1/pullpo-issue-lock.1"
-        man1.install "./share/man/man1/pullpo-issue-pin.1"
-        man1.install "./share/man/man1/pullpo-issue-reopen.1"
-        man1.install "./share/man/man1/pullpo-issue-status.1"
-        man1.install "./share/man/man1/pullpo-issue-transfer.1"
-        man1.install "./share/man/man1/pullpo-issue-unlock.1"
-        man1.install "./share/man/man1/pullpo-issue-unpin.1"
-        man1.install "./share/man/man1/pullpo-issue-view.1"
-        man1.install "./share/man/man1/pullpo-issue.1"
-        man1.install "./share/man/man1/pullpo-label-clone.1"
-        man1.install "./share/man/man1/pullpo-label-create.1"
-        man1.install "./share/man/man1/pullpo-label-delete.1"
-        man1.install "./share/man/man1/pullpo-label-edit.1"
-        man1.install "./share/man/man1/pullpo-label-list.1"
-        man1.install "./share/man/man1/pullpo-label.1"
-        man1.install "./share/man/man1/pullpo-org-list.1"
-        man1.install "./share/man/man1/pullpo-org.1"
-        man1.install "./share/man/man1/pullpo-pr-checkout.1"
-        man1.install "./share/man/man1/pullpo-pr-checks.1"
-        man1.install "./share/man/man1/pullpo-pr-close.1"
-        man1.install "./share/man/man1/pullpo-pr-comment.1"
-        man1.install "./share/man/man1/pullpo-pr-create.1"
-        man1.install "./share/man/man1/pullpo-pr-diff.1"
-        man1.install "./share/man/man1/pullpo-pr-edit.1"
-        man1.install "./share/man/man1/pullpo-pr-list.1"
-        man1.install "./share/man/man1/pullpo-pr-lock.1"
-        man1.install "./share/man/man1/pullpo-pr-merge.1"
-        man1.install "./share/man/man1/pullpo-pr-ready.1"
-        man1.install "./share/man/man1/pullpo-pr-reopen.1"
-        man1.install "./share/man/man1/pullpo-pr-review.1"
-        man1.install "./share/man/man1/pullpo-pr-status.1"
-        man1.install "./share/man/man1/pullpo-pr-unlock.1"
-        man1.install "./share/man/man1/pullpo-pr-view.1"
-        man1.install "./share/man/man1/pullpo-pr.1"
-        man1.install "./share/man/man1/pullpo-project-close.1"
-        man1.install "./share/man/man1/pullpo-project-copy.1"
-        man1.install "./share/man/man1/pullpo-project-create.1"
-        man1.install "./share/man/man1/pullpo-project-delete.1"
-        man1.install "./share/man/man1/pullpo-project-edit.1"
-        man1.install "./share/man/man1/pullpo-project-field-create.1"
-        man1.install "./share/man/man1/pullpo-project-field-delete.1"
-        man1.install "./share/man/man1/pullpo-project-field-list.1"
-        man1.install "./share/man/man1/pullpo-project-item-add.1"
-        man1.install "./share/man/man1/pullpo-project-item-archive.1"
-        man1.install "./share/man/man1/pullpo-project-item-create.1"
-        man1.install "./share/man/man1/pullpo-project-item-delete.1"
-        man1.install "./share/man/man1/pullpo-project-item-edit.1"
-        man1.install "./share/man/man1/pullpo-project-item-list.1"
-        man1.install "./share/man/man1/pullpo-project-list.1"
-        man1.install "./share/man/man1/pullpo-project-mark-template.1"
-        man1.install "./share/man/man1/pullpo-project-view.1"
-        man1.install "./share/man/man1/pullpo-project.1"
-        man1.install "./share/man/man1/pullpo-release-create.1"
-        man1.install "./share/man/man1/pullpo-release-delete-asset.1"
-        man1.install "./share/man/man1/pullpo-release-delete.1"
-        man1.install "./share/man/man1/pullpo-release-download.1"
-        man1.install "./share/man/man1/pullpo-release-edit.1"
-        man1.install "./share/man/man1/pullpo-release-list.1"
-        man1.install "./share/man/man1/pullpo-release-upload.1"
-        man1.install "./share/man/man1/pullpo-release-view.1"
-        man1.install "./share/man/man1/pullpo-release.1"
-        man1.install "./share/man/man1/pullpo-repo-archive.1"
-        man1.install "./share/man/man1/pullpo-repo-clone.1"
-        man1.install "./share/man/man1/pullpo-repo-create.1"
-        man1.install "./share/man/man1/pullpo-repo-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-add.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-delete.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key-list.1"
-        man1.install "./share/man/man1/pullpo-repo-deploy-key.1"
-        man1.install "./share/man/man1/pullpo-repo-edit.1"
-        man1.install "./share/man/man1/pullpo-repo-fork.1"
-        man1.install "./share/man/man1/pullpo-repo-list.1"
-        man1.install "./share/man/man1/pullpo-repo-rename.1"
-        man1.install "./share/man/man1/pullpo-repo-set-default.1"
-        man1.install "./share/man/man1/pullpo-repo-sync.1"
-        man1.install "./share/man/man1/pullpo-repo-unarchive.1"
-        man1.install "./share/man/man1/pullpo-repo-view.1"
-        man1.install "./share/man/man1/pullpo-repo.1"
-        man1.install "./share/man/man1/pullpo-ruleset-check.1"
-        man1.install "./share/man/man1/pullpo-ruleset-list.1"
-        man1.install "./share/man/man1/pullpo-ruleset-view.1"
-        man1.install "./share/man/man1/pullpo-ruleset.1"
-        man1.install "./share/man/man1/pullpo-run-cancel.1"
-        man1.install "./share/man/man1/pullpo-run-delete.1"
-        man1.install "./share/man/man1/pullpo-run-download.1"
-        man1.install "./share/man/man1/pullpo-run-list.1"
-        man1.install "./share/man/man1/pullpo-run-rerun.1"
-        man1.install "./share/man/man1/pullpo-run-view.1"
-        man1.install "./share/man/man1/pullpo-run-watch.1"
-        man1.install "./share/man/man1/pullpo-run.1"
-        man1.install "./share/man/man1/pullpo-search-code.1"
-        man1.install "./share/man/man1/pullpo-search-commits.1"
-        man1.install "./share/man/man1/pullpo-search-issues.1"
-        man1.install "./share/man/man1/pullpo-search-prs.1"
-        man1.install "./share/man/man1/pullpo-search-repos.1"
-        man1.install "./share/man/man1/pullpo-search.1"
-        man1.install "./share/man/man1/pullpo-secret-delete.1"
-        man1.install "./share/man/man1/pullpo-secret-list.1"
-        man1.install "./share/man/man1/pullpo-secret-set.1"
-        man1.install "./share/man/man1/pullpo-secret.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-add.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-delete.1"
-        man1.install "./share/man/man1/pullpo-ssh-key-list.1"
-        man1.install "./share/man/man1/pullpo-ssh-key.1"
-        man1.install "./share/man/man1/pullpo-status.1"
-        man1.install "./share/man/man1/pullpo-variable-delete.1"
-        man1.install "./share/man/man1/pullpo-variable-list.1"
-        man1.install "./share/man/man1/pullpo-variable-set.1"
-        man1.install "./share/man/man1/pullpo-variable.1"
-        man1.install "./share/man/man1/pullpo-workflow-disable.1"
-        man1.install "./share/man/man1/pullpo-workflow-enable.1"
-        man1.install "./share/man/man1/pullpo-workflow-list.1"
-        man1.install "./share/man/man1/pullpo-workflow-run.1"
-        man1.install "./share/man/man1/pullpo-workflow-view.1"
-        man1.install "./share/man/man1/pullpo-workflow.1"
-        man1.install "./share/man/man1/pullpo.1
+        man1.install("./share/man/man1/pullpo-alias-delete.1")
+        man1.install("./share/man/man1/pullpo-alias-import.1")
+        man1.install("./share/man/man1/pullpo-alias-list.1")
+        man1.install("./share/man/man1/pullpo-alias-set.1")
+        man1.install("./share/man/man1/pullpo-alias.1")
+        man1.install("./share/man/man1/pullpo-api.1")
+        man1.install("./share/man/man1/pullpo-auth-login.1")
+        man1.install("./share/man/man1/pullpo-auth-logout.1")
+        man1.install("./share/man/man1/pullpo-auth-refresh.1")
+        man1.install("./share/man/man1/pullpo-auth-setup-git.1")
+        man1.install("./share/man/man1/pullpo-auth-status.1")
+        man1.install("./share/man/man1/pullpo-auth-token.1")
+        man1.install("./share/man/man1/pullpo-auth.1")
+        man1.install("./share/man/man1/pullpo-browse.1")
+        man1.install("./share/man/man1/pullpo-cache-delete.1")
+        man1.install("./share/man/man1/pullpo-cache-list.1")
+        man1.install("./share/man/man1/pullpo-cache.1")
+        man1.install("./share/man/man1/pullpo-codespace-code.1")
+        man1.install("./share/man/man1/pullpo-codespace-cp.1")
+        man1.install("./share/man/man1/pullpo-codespace-create.1")
+        man1.install("./share/man/man1/pullpo-codespace-delete.1")
+        man1.install("./share/man/man1/pullpo-codespace-edit.1")
+        man1.install("./share/man/man1/pullpo-codespace-jupyter.1")
+        man1.install("./share/man/man1/pullpo-codespace-list.1")
+        man1.install("./share/man/man1/pullpo-codespace-logs.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-forward.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports-visibility.1")
+        man1.install("./share/man/man1/pullpo-codespace-ports.1")
+        man1.install("./share/man/man1/pullpo-codespace-rebuild.1")
+        man1.install("./share/man/man1/pullpo-codespace-ssh.1")
+        man1.install("./share/man/man1/pullpo-codespace-stop.1")
+        man1.install("./share/man/man1/pullpo-codespace-view.1")
+        man1.install("./share/man/man1/pullpo-codespace.1")
+        man1.install("./share/man/man1/pullpo-completion.1")
+        man1.install("./share/man/man1/pullpo-config-clear-cache.1")
+        man1.install("./share/man/man1/pullpo-config-get.1")
+        man1.install("./share/man/man1/pullpo-config-list.1")
+        man1.install("./share/man/man1/pullpo-config-set.1")
+        man1.install("./share/man/man1/pullpo-config.1")
+        man1.install("./share/man/man1/pullpo-extension-browse.1")
+        man1.install("./share/man/man1/pullpo-extension-create.1")
+        man1.install("./share/man/man1/pullpo-extension-exec.1")
+        man1.install("./share/man/man1/pullpo-extension-install.1")
+        man1.install("./share/man/man1/pullpo-extension-list.1")
+        man1.install("./share/man/man1/pullpo-extension-remove.1")
+        man1.install("./share/man/man1/pullpo-extension-search.1")
+        man1.install("./share/man/man1/pullpo-extension-upgrade.1")
+        man1.install("./share/man/man1/pullpo-extension.1")
+        man1.install("./share/man/man1/pullpo-gist-clone.1")
+        man1.install("./share/man/man1/pullpo-gist-create.1")
+        man1.install("./share/man/man1/pullpo-gist-delete.1")
+        man1.install("./share/man/man1/pullpo-gist-edit.1")
+        man1.install("./share/man/man1/pullpo-gist-list.1")
+        man1.install("./share/man/man1/pullpo-gist-rename.1")
+        man1.install("./share/man/man1/pullpo-gist-view.1")
+        man1.install("./share/man/man1/pullpo-gist.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-add.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-delete.1")
+        man1.install("./share/man/man1/pullpo-gpg-key-list.1")
+        man1.install("./share/man/man1/pullpo-gpg-key.1")
+        man1.install("./share/man/man1/pullpo-issue-close.1")
+        man1.install("./share/man/man1/pullpo-issue-comment.1")
+        man1.install("./share/man/man1/pullpo-issue-create.1")
+        man1.install("./share/man/man1/pullpo-issue-delete.1")
+        man1.install("./share/man/man1/pullpo-issue-develop.1")
+        man1.install("./share/man/man1/pullpo-issue-edit.1")
+        man1.install("./share/man/man1/pullpo-issue-list.1")
+        man1.install("./share/man/man1/pullpo-issue-lock.1")
+        man1.install("./share/man/man1/pullpo-issue-pin.1")
+        man1.install("./share/man/man1/pullpo-issue-reopen.1")
+        man1.install("./share/man/man1/pullpo-issue-status.1")
+        man1.install("./share/man/man1/pullpo-issue-transfer.1")
+        man1.install("./share/man/man1/pullpo-issue-unlock.1")
+        man1.install("./share/man/man1/pullpo-issue-unpin.1")
+        man1.install("./share/man/man1/pullpo-issue-view.1")
+        man1.install("./share/man/man1/pullpo-issue.1")
+        man1.install("./share/man/man1/pullpo-label-clone.1")
+        man1.install("./share/man/man1/pullpo-label-create.1")
+        man1.install("./share/man/man1/pullpo-label-delete.1")
+        man1.install("./share/man/man1/pullpo-label-edit.1")
+        man1.install("./share/man/man1/pullpo-label-list.1")
+        man1.install("./share/man/man1/pullpo-label.1")
+        man1.install("./share/man/man1/pullpo-org-list.1")
+        man1.install("./share/man/man1/pullpo-org.1")
+        man1.install("./share/man/man1/pullpo-pr-checkout.1")
+        man1.install("./share/man/man1/pullpo-pr-checks.1")
+        man1.install("./share/man/man1/pullpo-pr-close.1")
+        man1.install("./share/man/man1/pullpo-pr-comment.1")
+        man1.install("./share/man/man1/pullpo-pr-create.1")
+        man1.install("./share/man/man1/pullpo-pr-diff.1")
+        man1.install("./share/man/man1/pullpo-pr-edit.1")
+        man1.install("./share/man/man1/pullpo-pr-list.1")
+        man1.install("./share/man/man1/pullpo-pr-lock.1")
+        man1.install("./share/man/man1/pullpo-pr-merge.1")
+        man1.install("./share/man/man1/pullpo-pr-ready.1")
+        man1.install("./share/man/man1/pullpo-pr-reopen.1")
+        man1.install("./share/man/man1/pullpo-pr-review.1")
+        man1.install("./share/man/man1/pullpo-pr-status.1")
+        man1.install("./share/man/man1/pullpo-pr-unlock.1")
+        man1.install("./share/man/man1/pullpo-pr-view.1")
+        man1.install("./share/man/man1/pullpo-pr.1")
+        man1.install("./share/man/man1/pullpo-project-close.1")
+        man1.install("./share/man/man1/pullpo-project-copy.1")
+        man1.install("./share/man/man1/pullpo-project-create.1")
+        man1.install("./share/man/man1/pullpo-project-delete.1")
+        man1.install("./share/man/man1/pullpo-project-edit.1")
+        man1.install("./share/man/man1/pullpo-project-field-create.1")
+        man1.install("./share/man/man1/pullpo-project-field-delete.1")
+        man1.install("./share/man/man1/pullpo-project-field-list.1")
+        man1.install("./share/man/man1/pullpo-project-item-add.1")
+        man1.install("./share/man/man1/pullpo-project-item-archive.1")
+        man1.install("./share/man/man1/pullpo-project-item-create.1")
+        man1.install("./share/man/man1/pullpo-project-item-delete.1")
+        man1.install("./share/man/man1/pullpo-project-item-edit.1")
+        man1.install("./share/man/man1/pullpo-project-item-list.1")
+        man1.install("./share/man/man1/pullpo-project-list.1")
+        man1.install("./share/man/man1/pullpo-project-mark-template.1")
+        man1.install("./share/man/man1/pullpo-project-view.1")
+        man1.install("./share/man/man1/pullpo-project.1")
+        man1.install("./share/man/man1/pullpo-release-create.1")
+        man1.install("./share/man/man1/pullpo-release-delete-asset.1")
+        man1.install("./share/man/man1/pullpo-release-delete.1")
+        man1.install("./share/man/man1/pullpo-release-download.1")
+        man1.install("./share/man/man1/pullpo-release-edit.1")
+        man1.install("./share/man/man1/pullpo-release-list.1")
+        man1.install("./share/man/man1/pullpo-release-upload.1")
+        man1.install("./share/man/man1/pullpo-release-view.1")
+        man1.install("./share/man/man1/pullpo-release.1")
+        man1.install("./share/man/man1/pullpo-repo-archive.1")
+        man1.install("./share/man/man1/pullpo-repo-clone.1")
+        man1.install("./share/man/man1/pullpo-repo-create.1")
+        man1.install("./share/man/man1/pullpo-repo-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-add.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-delete.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key-list.1")
+        man1.install("./share/man/man1/pullpo-repo-deploy-key.1")
+        man1.install("./share/man/man1/pullpo-repo-edit.1")
+        man1.install("./share/man/man1/pullpo-repo-fork.1")
+        man1.install("./share/man/man1/pullpo-repo-list.1")
+        man1.install("./share/man/man1/pullpo-repo-rename.1")
+        man1.install("./share/man/man1/pullpo-repo-set-default.1")
+        man1.install("./share/man/man1/pullpo-repo-sync.1")
+        man1.install("./share/man/man1/pullpo-repo-unarchive.1")
+        man1.install("./share/man/man1/pullpo-repo-view.1")
+        man1.install("./share/man/man1/pullpo-repo.1")
+        man1.install("./share/man/man1/pullpo-ruleset-check.1")
+        man1.install("./share/man/man1/pullpo-ruleset-list.1")
+        man1.install("./share/man/man1/pullpo-ruleset-view.1")
+        man1.install("./share/man/man1/pullpo-ruleset.1")
+        man1.install("./share/man/man1/pullpo-run-cancel.1")
+        man1.install("./share/man/man1/pullpo-run-delete.1")
+        man1.install("./share/man/man1/pullpo-run-download.1")
+        man1.install("./share/man/man1/pullpo-run-list.1")
+        man1.install("./share/man/man1/pullpo-run-rerun.1")
+        man1.install("./share/man/man1/pullpo-run-view.1")
+        man1.install("./share/man/man1/pullpo-run-watch.1")
+        man1.install("./share/man/man1/pullpo-run.1")
+        man1.install("./share/man/man1/pullpo-search-code.1")
+        man1.install("./share/man/man1/pullpo-search-commits.1")
+        man1.install("./share/man/man1/pullpo-search-issues.1")
+        man1.install("./share/man/man1/pullpo-search-prs.1")
+        man1.install("./share/man/man1/pullpo-search-repos.1")
+        man1.install("./share/man/man1/pullpo-search.1")
+        man1.install("./share/man/man1/pullpo-secret-delete.1")
+        man1.install("./share/man/man1/pullpo-secret-list.1")
+        man1.install("./share/man/man1/pullpo-secret-set.1")
+        man1.install("./share/man/man1/pullpo-secret.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-add.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-delete.1")
+        man1.install("./share/man/man1/pullpo-ssh-key-list.1")
+        man1.install("./share/man/man1/pullpo-ssh-key.1")
+        man1.install("./share/man/man1/pullpo-status.1")
+        man1.install("./share/man/man1/pullpo-variable-delete.1")
+        man1.install("./share/man/man1/pullpo-variable-list.1")
+        man1.install("./share/man/man1/pullpo-variable-set.1")
+        man1.install("./share/man/man1/pullpo-variable.1")
+        man1.install("./share/man/man1/pullpo-workflow-disable.1")
+        man1.install("./share/man/man1/pullpo-workflow-enable.1")
+        man1.install("./share/man/man1/pullpo-workflow-list.1")
+        man1.install("./share/man/man1/pullpo-workflow-run.1")
+        man1.install("./share/man/man1/pullpo-workflow-view.1")
+        man1.install("./share/man/man1/pullpo-workflow.1")
+        man1.install("./share/man/man1/pullpo.1)
       end
     end
   end
