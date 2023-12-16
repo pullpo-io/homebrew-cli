@@ -5,22 +5,22 @@
 class Pullpo < Formula
   desc "Control Pullpo, GitHub and GitLab from the terminal."
   homepage "https://pullpo.io/"
-  version "0.10"
+  version "0.11"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.10/pullpo_0.10_macOS_amd64.zip"
-      sha256 "9d9840e849e5bda2b832f0006b1ff5f1c747bd9605ff5abca869a78845e72dc1"
+    if Hardware::CPU.arm?
+      url "https://github.com/pullpo-io/cli/releases/download/v0.11/pullpo_0.11_macOS_arm64.zip"
+      sha256 "b2337c86fb7a15148f7d004a709ee5ea29058fcc55d48cc42d94ca67a6eac7cb"
 
       def install
         bin.install "bin/pullpo"
         man1.install "/usr/share/man/man1/pullpo.1.gz"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.10/pullpo_0.10_macOS_arm64.zip"
-      sha256 "2b37020ce66ce5c1adc33c5cc922c8ed425655d3a5eace6402e04399daaf915b"
+    if Hardware::CPU.intel?
+      url "https://github.com/pullpo-io/cli/releases/download/v0.11/pullpo_0.11_macOS_amd64.zip"
+      sha256 "63f23e246de4439e71d22bd912a1b7840b50f6103be9f2b2a5b9e6d8a204d417"
 
       def install
         bin.install "bin/pullpo"
@@ -31,17 +31,8 @@ class Pullpo < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.10/pullpo_0.10_linux_armv6.tar.gz"
-      sha256 "dbe5e8c5b048ceb51a3f4287f7d0913e1f7f13fb3e3651d53bd07978074316ac"
-
-      def install
-        bin.install "bin/pullpo"
-        man1.install "/usr/share/man/man1/pullpo.1.gz"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.10/pullpo_0.10_linux_amd64.tar.gz"
-      sha256 "781d3e92b9686aa690f2cd4f57bcf862bd938fb69ad4eeb56e70300ccf94175b"
+      url "https://github.com/pullpo-io/cli/releases/download/v0.11/pullpo_0.11_linux_armv6.tar.gz"
+      sha256 "ebb75386043c64fd0b42cb239ce2f60ecc2326a27a13393aa44adbbee5089461"
 
       def install
         bin.install "bin/pullpo"
@@ -49,8 +40,17 @@ class Pullpo < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pullpo-io/cli/releases/download/v0.10/pullpo_0.10_linux_arm64.tar.gz"
-      sha256 "33133328b0a3f0bf3cfb380d2eebcd6766c116e0569776ebc2d6587289ff2bba"
+      url "https://github.com/pullpo-io/cli/releases/download/v0.11/pullpo_0.11_linux_arm64.tar.gz"
+      sha256 "7558f2c503ea8f1743a9dff63fb10f37e1383259d23d8bfab67cc62fd66f9e41"
+
+      def install
+        bin.install "bin/pullpo"
+        man1.install "/usr/share/man/man1/pullpo.1.gz"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/pullpo-io/cli/releases/download/v0.11/pullpo_0.11_linux_amd64.tar.gz"
+      sha256 "518e71c003e46c0b9ff0ca610871a92972f65a26d9e40906201c449467af2515"
 
       def install
         bin.install "bin/pullpo"
